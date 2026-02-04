@@ -1,79 +1,163 @@
-/* TOUT EFFACER ET COLLER CE CODE */
+/* =========================================
+   1. VARIABLES & FOND
+   ========================================= */
 :root {
-    --primary-dark: #1e293b;
-    --accent-color: #38bdf8;
-    --text-dark: #334155;
-    --bg-start: #f8fafc;
-    --bg-end: #e2e8f0;
-    --glass-bg: rgba(255, 255, 255, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.8);
+    --bg-cream: #f9f6f2;
+    --accent-mocha: #5d4037; /* Marron baddie chic */
+    --nude-light: #f3ece4;
+    --text-color: #2c2c2c;
+    --glass: rgba(255, 255, 255, 0.5);
 }
 
 * { box-sizing: border-box; }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    background: linear-gradient(135deg, var(--bg-start) 0%, var(--bg-end) 100%);
-    background-attachment: fixed;
-    color: var(--text-dark);
+    background-color: var(--bg-cream);
+    color: var(--text-color);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
+/* EFFET ÉTOILES / BRILLANCE */
+.stars {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    background-image: 
+        radial-gradient(1px 1px at 20px 30px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1.5px 1.5px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 90px 40px, #fff, rgba(0,0,0,0));
+    background-size: 200px 200px;
+    animation: twinkle 4s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+/* =========================================
+   2. NAVIGATION
+   ========================================= */
 nav {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(249, 246, 242, 0.8);
     backdrop-filter: blur(10px);
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    position: sticky; top: 0; z-index: 100;
 }
 
 nav a {
-    color: var(--primary-dark);
-    margin: 0 15px;
+    color: var(--text-color);
     text-decoration: none;
+    margin: 0 15px;
     font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
 }
 
+/* =========================================
+   3. HERO (L'ACCUEIL)
+   ========================================= */
 #hero {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 100px 20px;
     text-align: center;
-    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
-    padding: 60px 20px;
+    background: linear-gradient(to bottom, #fdfcf0, #f3ece4);
+}
+
+.photo-container {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    overflow: hidden; /* Empêche la photo de déborder */
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 5px solid white;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ESSENTIEL : garde les proportions sans écraser */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin: 0;
+    color: var(--accent-mocha);
+}
+
+.subtitle {
+    font-style: italic;
+    color: #888;
+    margin-top: 10px;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: var(--primary-dark);
+    margin-top: 30px;
+    padding: 15px 40px;
+    background: var(--accent-mocha);
     color: white;
     text-decoration: none;
-    border-radius: 12px;
-    font-weight: bold;
+    border-radius: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: 0.3s;
 }
 
-section { padding: 60px 20px; max-width: 900px; margin: auto; }
-
-.project, ul li {
-    background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    padding: 25px;
-    margin-bottom: 20px;
+.btn:hover {
+    letter-spacing: 3px;
+    background: #3e2723;
 }
 
-footer { text-align: center; padding: 40px; background: white; color: #94a3b8; }
+/* =========================================
+   4. SECTIONS & GLASSMORPHISM
+   ========================================= */
+section {
+    padding: 80px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.glass-card {
+    background: var(--glass);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.7);
+    padding: 40px;
+    border-radius: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.02);
+}
+
+h2 { font-family: 'Playfair Display', serif; font-size: 2rem; }
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+footer {
+    text-align: center;
+    padding: 50px;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    color: #aaa;
+}
