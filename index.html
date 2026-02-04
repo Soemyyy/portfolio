@@ -3,71 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Nouvian | Portfolio BTS SIO</title>
+    <title>Sarah Nouvian | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
+    <div class="stars"></div> <nav>
         <a href="#hero">Accueil</a>
-        <a href="#about">À propos</a>
+        <a href="#about">Bio</a>
         <a href="#projects">Projets</a>
-        <a href="#skills">Compétences</a>
+        <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <header id="hero">
-        <img src="photo.jpg" alt="Photo de Sarah Nouvian" class="photo">
-        <h1>Bonjour, je suis Sarah Nouvian</h1>
-        <p>Étudiante en BTS SIO — Option SISR (Solutions d'infrastructure, systèmes et réseaux)</p>
-        <a href="cv.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+        <div class="photo-container">
+            <img src="photo.jpg" alt="Sarah Nouvian" class="photo">
+        </div>
+        <h1>Sarah Nouvian</h1>
+        <p class="subtitle">Étudiante BTS SIO — Option SISR</p>
+        <a href="cv.pdf" class="btn" target="_blank">Download CV</a>
     </header>
 
     <section id="about">
-        <div class="project">
-            <h2>À propos de moi</h2>
-            <p>
-                Actuellement en formation BTS Services Informatiques aux Organisations, 
-                je me spécialise dans les infrastructures réseaux. Je suis passionnée par 
-                la cybersécurité et l'administration système.
-            </p>
+        <div class="glass-card">
+            <h2>À propos</h2>
+            <p>Future experte en infrastructure et réseaux. Allier technique et esthétique est ma signature.</p>
         </div>
     </section>
 
     <section id="projects">
-        <h2>Mes projets</h2>
-
-        <div class="project">
-            <h3>Mon Portfolio</h3>
-            <p>Création de ce site web avec HTML5 et CSS3, utilisant des techniques modernes comme le Glassmorphism et le Responsive Design.</p>
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="glass-card">
+            <h3>Infrastructure Cloud</h3>
+            <p>Mise en place de solutions réseaux sécurisées et scalables.</p>
         </div>
-
-        <div class="project">
-            <h3>Infrastructure Réseau</h3>
-            <p>Mise en place et configuration de serveurs Windows et Linux dans un environnement virtualisé.</p>
+        <div class="glass-card">
+            <h3>Web Design</h3>
+            <p>Création d'interfaces modernes et responsives.</p>
         </div>
     </section>
 
     <section id="skills">
-        <h2>Compétences</h2>
-        <ul>
-            <li>HTML5 / CSS3 / JavaScript</li>
-            <li>Administration Réseaux (Cisco, Switchs, VLANs)</li>
-            <li>Virtualisation (VMware, VirtualBox)</li>
-            <li>Gestion de version avec GitHub</li>
+        <h2 class="section-title">Compétences</h2>
+        <ul class="skills-list">
+            <li>Cisco & Switching</li>
+            <li>Cybersecurity</li>
+            <li>HTML / CSS / JS</li>
+            <li>Linux Admin</li>
         </ul>
     </section>
 
     <section id="contact">
-        <div class="project">
-            <h2>Me contacter</h2>
-            <p>Vous avez une question ou une opportunité ? N'hésitez pas à m'écrire :</p>
-            <p><strong>Email :</strong> sarahnouvian@gmail.com</p>
+        <div class="glass-card">
+            <h2>Contact</h2>
+            <p>Parlons projets : <strong>sarahnouvian@gmail.com</strong></p>
         </div>
     </section>
 
     <footer>
-        <p>© 2026 - SARAH NOUVIAN - Tous droits réservés</p>
+        <p>✨ SARAH NOUVIAN — 2026 ✨</p>
     </footer>
 
 </body>
