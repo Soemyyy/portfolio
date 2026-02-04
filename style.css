@@ -151,3 +151,6 @@ footer {
 .btn:hover {
     background: #e5e7eb;
 }
+#hero {
+  background: linear-gradient(135deg, red, blue) !important;
+}
