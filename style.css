@@ -1,7 +1,7 @@
 :root {
-    --bg-cream: #fdfaf5; /* Beige crème très clair */
-    --accent-taupe: #5d4037; /* Marron baddie chic */
-    --text-color: #333;
+    --bg-cream: #fdfaf5; 
+    --accent-taupe: #5d4037; 
+    --text-color: #333; /* On s'assure que c'est bien celle-ci qui est utilisée */
     --glass-effect: rgba(255, 255, 255, 0.4);
 }
 
@@ -11,42 +11,31 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: var(--bg-cream);
-    color: var(--text-dark);
+    color: var(--text-color); /* Correction faite ici */
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-/* ÉTOILES ET BRILLANCE */
 /* ✨ PAILLETTES ARGENT LUXE ✨ */
 .stars {
     position: fixed;
     inset: 0;
     z-index: 0;
     pointer-events: none;
-
     background-image:
         radial-gradient(2px 2px at 15% 20%, rgba(255,255,255,0.95), transparent),
         radial-gradient(1.5px 1.5px at 45% 35%, rgba(220,220,220,0.9), transparent),
         radial-gradient(2.5px 2.5px at 70% 25%, rgba(255,255,255,1), transparent),
         radial-gradient(1.8px 1.8px at 30% 75%, rgba(230,230,230,0.85), transparent),
         radial-gradient(2px 2px at 85% 65%, rgba(255,255,255,0.9), transparent);
-
     background-size: 260px 260px;
     animation: silverSparkle 3.5s ease-in-out infinite;
 }
+
 @keyframes silverSparkle {
-    0%, 100% {
-        opacity: 0.3;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.12);
-    }
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.12); }
 }
-
-
-
 
 /* NAVIGATION */
 nav {
@@ -55,7 +44,9 @@ nav {
     -webkit-backdrop-filter: blur(15px);
     padding: 1.5rem;
     text-align: center;
-    position: sticky; top: 0; z-index: 100;
+    position: sticky; 
+    top: 0; 
+    z-index: 100;
 }
 
 nav a {
@@ -68,7 +59,7 @@ nav a {
     letter-spacing: 2px;
 }
 
-/* HERO (ACCUEIL) */
+/* HERO */
 #hero {
     padding: 80px 20px;
     text-align: center;
@@ -87,12 +78,12 @@ nav a {
 .photo {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Garde les proportions de ta nouvelle photo */
+    object-fit: cover;
 }
 
 h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 8vw, 4rem); /* S'adapte mieux aux petits écrans */
     margin: 0;
     color: var(--accent-taupe);
 }
@@ -104,7 +95,7 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* BOUTON BADDIE */
+/* BOUTON */
 .btn {
     display: inline-block;
     margin-top: 35px;
@@ -125,7 +116,7 @@ h1 {
     box-shadow: 0 10px 25px rgba(93, 64, 55, 0.2);
 }
 
-/* SECTIONS & GLASSMORPHISM */
+/* SECTIONS */
 section {
     padding: 100px 20px;
     max-width: 850px;
@@ -137,7 +128,7 @@ section {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,0.8);
-    padding: 50px;
+    padding: clamp(20px, 5vw, 50px); /* Padding fluide */
     border-radius: 40px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.02);
 }
@@ -168,6 +159,8 @@ footer {
     letter-spacing: 4px;
     color: #ccc;
 }
+
+/* Empêche les étoiles de passer devant le contenu */
 body > *:not(.stars) {
     position: relative;
     z-index: 1;
