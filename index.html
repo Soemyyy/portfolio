@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sarah Nouvian | Portfolio SISR</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,8 +17,9 @@
             <a href="#hero" class="nav-logo">SN</a>
             <div class="nav-links">
                 <a href="#about">Moi</a>
-                <a href="#path">Parcours</a>
+                <a href="#path">Stages</a>
                 <a href="#projects">Projets</a>
+                <a href="#skills">Skills</a>
                 <a href="#veille">Veille</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -43,41 +45,85 @@
         <section id="about">
             <h2 class="section-title">À propos de moi</h2>
             <div class="glass-card">
-                <p>Étudiante en <strong>BTS SIO SISR</strong>, je me passionne pour la gestion des infrastructures et la sécurité des SI.</p>
-                <p>Ce portfolio retrace mon parcours technique, mes projets et ma veille technologique.</p>
+                <p>Étudiante en <strong>BTS SIO SISR</strong>, je me passionne pour l'administration des infrastructures et la sécurité des systèmes d'information. Rigoureuse et autonome, je développe mes compétences à travers des projets concrets et une veille constante.</p>
             </div>
         </section>
 
         <section id="path">
-            <h2 class="section-title">Mon Parcours</h2>
+            <h2 class="section-title">Stages Professionnels</h2>
             <div class="timeline">
                 <div class="glass-card timeline-item">
-                    <span class="date">Janvier- Mars 2026</span>
+                    <span class="date">2025</span>
                     <h3>Stage de 2ème Année</h3>
-                    <p>Mise en place de solutions de supervision et gestion de parc informatique.</p>
+                    <p>Optimisation de l'infrastructure réseau et mise en place de solutions de supervision.</p>
                     <a href="docs/rapport-stage-2.pdf" target="_blank" class="link-btn">Consulter le rapport →</a>
                 </div>
                 <div class="glass-card timeline-item">
-                    <span class="date">Juin- Juillet 2025</span>
+                    <span class="date">2024</span>
                     <h3>Stage de 1ère Année</h3>
-                    <p>Maintenance préventive et support utilisateur.</p>
+                    <p>Support technique de proximité et maintenance préventive du parc informatique.</p>
                     <a href="docs/rapport-stage-1.pdf" target="_blank" class="link-btn">Consulter le rapport →</a>
                 </div>
             </div>
         </section>
 
+        <section id="skills">
+            <h2 class="section-title">Expertise Technique</h2>
+            <div class="skills-grid">
+                
+                <div class="glass-card skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Réseaux</h3>
+                    </div>
+                    <ul class="skill-list-modern">
+                        <li>Configuration Cisco (VLAN, Routage)</li>
+                        <li>Services (DHCP, DNS, SSH, VPN)</li>
+                        <li>Supervision (Nagios, Zabbix)</li>
+                        <li>Pare-feu & Sécurité Flux</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Systèmes</h3>
+                    </div>
+                    <ul class="skill-list-modern">
+                        <li>Active Directory & GPO</li>
+                        <li>Linux (Debian, Ubuntu)</li>
+                        <li>Virtualisation (VMware, ESXi)</li>
+                        <li>Conteneurisation (Docker)</li>
+                    </ul>
+                </div>
+
+                <div class="glass-card skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersécurité</h3>
+                    </div>
+                    <ul class="skill-list-modern">
+                        <li>Authentification MFA / FIDO2</li>
+                        <li>Gestion de parc (GLPI)</li>
+                        <li>Veille ANSSI & CERT-FR</li>
+                        <li>Scripting Bash & Python</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
         <section id="projects">
-            <h2 class="section-title">Projets Techniques</h2>
+            <h2 class="section-title">Projets Réalisés</h2>
             <div class="grid-projects">
                 <div class="glass-card">
-                    <h3>GLPI & GPO</h3>
-                    <p>Gestion de parc et déploiement automatisé d'agents via Active Directory.</p>
-                    <a href="docs/mission-glpi.pdf" target="_blank" class="btn-small">Voir la documentation</a>
+                    <h3>GLPI & Inventaire</h3>
+                    <p>Déploiement d'un inventaire automatisé via GPO.</p>
+                    <a href="docs/mission-glpi.pdf" target="_blank" class="btn-small">Documentation</a>
                 </div>
                 <div class="glass-card">
-                    <h3>Nagios Core</h3>
-                    <p>Installation d'une solution de supervision pour monitorer les services critiques.</p>
-                    <a href="docs/tp-nagios.pdf" target="_blank" class="btn-small">Voir le rapport</a>
+                    <h3>Nagios Supervision</h3>
+                    <p>Monitoring temps réel des services serveurs.</p>
+                    <a href="docs/tp-nagios.pdf" target="_blank" class="btn-small">Documentation</a>
                 </div>
             </div>
         </section>
@@ -86,15 +132,15 @@
             <h2 class="section-title">Veille Technologique</h2>
             <div class="glass-card">
                 <h3>L'Authentification Multifacteur (MFA)</h3>
-                <p>Analyse des méthodes de sécurisation des accès face au phishing moderne.</p>
-                <a href="docs/veille-mfa.pdf" target="_blank" class="btn">Lire le dossier complet</a>
+                <p>Étude approfondie sur la sécurisation des accès et les nouvelles normes de cybersécurité.</p>
+                <a href="docs/veille-mfa.pdf" target="_blank" class="btn">Consulter la veille</a>
             </div>
         </section>
 
         <section id="contact">
             <div class="glass-card contact-card">
                 <h2>Contact</h2>
-                <p>Pour toute question ou collaboration :</p>
+                <p>Besoin d'un profil motivé en SISR ?</p>
                 <a href="mailto:sarahnouvian@gmail.com" class="email">sarahnouvian@gmail.com</a>
             </div>
         </section>
@@ -103,8 +149,4 @@
     <a href="#hero" class="back-to-top">↑</a>
 
     <footer>
-        <p>✨ SARAH NOUVIAN — 2026 — Portfolio SISR ✨</p>
-    </footer>
-
-</body>
-</html>
+        <p>✨ SARAH NOUVIAN — Portfolio BTS SIO SISR — 2026 ✨</p>
