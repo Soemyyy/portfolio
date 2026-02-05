@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Nouvian | Portfolio</title>
+    <title>Sarah Nouvian | Portfolio BTS SIO</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,101 +11,143 @@
 
     <div class="stars"></div> 
 
-  <nav>
-    <a href="#hero">Accueil</a>
-    <a href="#about">À propos</a>
-    <a href="#projects">Projets</a>
-    <a href="#skills">Compétences</a>
-    <a href="#veille">Veille</a>
-    <a href="#contact">Contact</a>
-</nav>
+    <nav>
+        <a href="#hero">Accueil</a>
+        <a href="#about">Moi</a>
+        <a href="#curriculum">Parcours</a>
+        <a href="#internships">Stages</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Skills</a>
+        <a href="#veille">Veille</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <header id="hero">
+    <header id="hero" style="height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
         <div class="photo-container">
             <img src="photo.jpg" alt="Sarah Nouvian" class="photo">
         </div>
-        <h1>Sarah Nouvian</h1>
-        <p class="subtitle">Étudiante BTS SIO — Option SISR</p>
-        <a href="cv.pdf" class="btn" target="_blank">Télécharger mon CV</a>
+        <h1 style="font-size: 3.5rem; margin-bottom: 10px;">Sarah Nouvian</h1>
+        <p class="subtitle" style="font-size: 1.2rem; letter-spacing: 3px; text-transform: uppercase;">Expertise Réseaux & Cybersécurité</p>
+        <p style="margin-top: 10px; font-style: italic; opacity: 0.8;">Étudiante en BTS SIO SISR</p>
+        
+        <div style="margin-top: 40px; display: flex; gap: 20px;">
+            <a href="cv.pdf" class="btn" target="_blank">Mon CV</a>
+            <a href="#about" class="btn" style="background: transparent; border: 1px solid white;">Découvrir mon profil ✨</a>
+        </div>
     </header>
 
     <section id="about">
-    <div class="glass-card">
-        <h2>À propos de moi</h2>
-        <p>
-            Étudiante en <strong>BTS SIO option SISR</strong>, je me passionne pour la gestion des infrastructures réseaux et la sécurisation des systèmes d'information. 
-        </p>
-        <p>
-            Mon parcours m'a permis de développer des compétences concrètes, de l'administration de serveurs <strong>Linux et Windows</strong> à la mise en place de solutions de <strong>supervision</strong> et de gestion de parc comme GLPI.
-        </p>
-        <p>
-            Rigoureuse et curieuse, je porte une attention particulière aux enjeux de la <strong>cybersécurité</strong>, comme en témoigne mon travail de veille sur l'authentification multifacteur.
-        </p>
-    </div>
-</section>
-    
-<section id="projects">
-    <h2 class="section-title">Mes Projets Techniques</h2>
-    
-    <div class="glass-card">
-        <h3>Gestion de Parc & Helpdesk (GLPI)</h3>
-        <p>Installation d'un serveur GLPI sous Ubuntu avec base de données MariaDB. Déploiement automatisé de l'agent GLPI via GPO Windows Server pour l'inventaire du parc.</p>
-        <a href="docs/mission-glpi.pdf" target="_blank" class="btn" style="font-size: 0.6rem; padding: 10px 20px;">Voir la Doc GLPI</a>
-    </div>
+        <div class="glass-card">
+            <h2>À propos de moi</h2>
+            <p>
+                Actuellement en <strong>BTS SIO (Services Informatiques aux Organisations) option SISR</strong>, je me spécialise dans l'administration des infrastructures et la sécurité des systèmes.
+            </p>
+            <p>
+                Mon approche allie rigueur technique et curiosité technologique. J'ai acquis une solide expérience pratique dans la mise en place de serveurs, la gestion de parc et la supervision réseau.
+            </p>
+        </div>
+    </section>
 
-    <div class="glass-card">
-        <h3>Supervision Réseau (Nagios)</h3>
-        <p>Déploiement d'un serveur Nagios Core pour surveiller l'état des services critiques. Configuration d'agents NRPE sur cibles Linux pour monitorer le CPU, le disque et SSH.</p>
-        <a href="docs/tp-nagios.pdf" target="_blank" class="btn" style="font-size: 0.6rem; padding: 10px 20px;">Voir la Doc Nagios</a>
-    </div>
-</section>
+    <section id="curriculum">
+        <h2 class="section-title">Mon Parcours</h2>
+        <div class="glass-card">
+            <ul class="skills-list" style="list-style: none; padding: 0;">
+                <li style="margin-bottom: 25px; border-left: 2px solid white; padding-left: 20px;">
+                    <span style="font-weight: 600; color: #fff;">2023 - 2025</span><br>
+                    <strong>BTS SIO - Option SISR</strong><br>
+                    <small>Solutions d'Infrastructure, Systèmes et Réseaux</small>
+                </li>
+                <li style="margin-bottom: 25px; border-left: 2px solid white; padding-left: 20px;">
+                    <span style="font-weight: 600; color: #fff;">2023</span><br>
+                    <strong>Baccalauréat</strong><br>
+                    <small>Obtenu avec succès (Précise ton lycée ici)</small>
+                </li>
+                <li style="border-left: 2px solid white; padding-left: 20px;">
+                    <span style="font-weight: 600; color: #fff;">2020</span><br>
+                    <strong>Brevet des Collèges</strong><br>
+                    <small>Admise</small>
+                </li>
+            </ul>
+        </div>
+    </section>
 
-   <section id="skills">
-    <h2 class="section-title">Compétences Techniques</h2>
-    <div class="glass-card">
-        <h3>Réseaux & Infrastructures</h3>
-        <ul class="skills-list">
-            <li>Configuration Switches/Routeurs (VLAN, Routage)</li>
-            <li>Services Réseaux (DHCP, DNS, SSH)</li>
-            <li>Supervision (Zabbix ou GLPI)</li>
-            <li>Sécurisation des flux (Pare-feu / Firewall)</li>
-        </ul>
+    <section id="internships">
+        <h2 class="section-title">Mes Stages</h2>
+        
+        <div class="glass-card" style="margin-bottom: 25px;">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <h3>Stage de 2ème Année</h3>
+                <span style="font-size: 0.8rem; opacity: 0.7;">2025 (Précise les dates)</span>
+            </div>
+            <p><strong>Entreprise :</strong> [Nom de l'entreprise]</p>
+            <p><strong>Missions :</strong> Optimisation de l'infrastructure réseau, gestion de la sécurité des accès et support technique avancé.</p>
+            <a href="docs/rapport-stage-2.pdf" target="_blank" class="btn" style="font-size: 0.7rem; margin-top: 15px;">Consulter le rapport</a>
+        </div>
 
-        <h3>Systèmes & Cloud</h3>
-        <ul class="skills-list">
-            <li>Administration Windows Server (Active Directory)</li>
-            <li>Gestion de serveurs Linux (Debian, Ubuntu)</li>
-            <li>Virtualisation (VMware, VirtualBox)</li>
-            <li>Solutions Cloud & Sauvegardes</li>
-        </ul>
-    </div>
-</section>
-    
-<section id="veille">
-    <div class="glass-card">
-        <h2>Veille Technologique</h2>
-        <p>Sujet : <strong>L'authentification multifacteur (MFA) et les enjeux de la cybersécurité.</strong></p>
-        <p>Étude sur le renforcement des accès via les méthodes de possession (OTP, clés FIDO2) et de biométrie pour contrer les cyberattaques modernes comme le phishing.</p>
-        <p style="font-size: 0.8rem; color: #999;">Outils utilisés : Flux RSS, Google Alerts, Veille sur Cert-FR et l'ANSSI.</p>
-        <a href="docs/veille-mfa.pdf" target="_blank" class="btn" style="font-size: 0.7rem; padding: 12px 25px;">Consulter le compte-rendu</a>
-    </div>
-</section>
+        <div class="glass-card">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <h3>Stage de 1ère Année</h3>
+                <span style="font-size: 0.8rem; opacity: 0.7;">2024 (Précise les dates)</span>
+            </div>
+            <p><strong>Entreprise :</strong> [Nom de l'entreprise]</p>
+            <p><strong>Missions :</strong> Maintenance préventive du parc informatique, configuration de postes et initiation à l'administration Windows Server.</p>
+            <a href="docs/rapport-stage-1.pdf" target="_blank" class="btn" style="font-size: 0.7rem; margin-top: 15px;">Consulter le rapport</a>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Mes Projets Techniques</h2>
+        <div class="glass-card">
+            <h3>Gestion de Parc & Helpdesk (GLPI)</h3>
+            <p>Déploiement complet d'un serveur GLPI sous Ubuntu. Automatisation de l'inventaire via GPO Windows Server (Active Directory).</p>
+            <a href="docs/mission-glpi.pdf" target="_blank" class="btn" style="font-size: 0.65rem; padding: 10px 20px;">Voir la Documentation Technique</a>
+        </div>
+
+        <div class="glass-card">
+            <h3>Supervision Réseau (Nagios)</h3>
+            <p>Installation et configuration de Nagios Core pour monitorer les services critiques (CPU, Disque, SSH) d'un parc Linux.</p>
+            <a href="docs/tp-nagios.pdf" target="_blank" class="btn" style="font-size: 0.65rem; padding: 10px 20px;">Voir le Rapport de Supervision</a>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Compétences SISR</h2>
+        <div class="glass-card">
+            <h3>Infrastructures & Réseaux</h3>
+            <ul class="skills-list">
+                <li>Configuration Switches/Routeurs Cisco (VLAN, Routage)</li>
+                <li>Services Réseaux (DHCP, DNS, SSH, VPN)</li>
+                <li>Supervision (Nagios, Zabbix, GLPI)</li>
+            </ul>
+            <h3>Systèmes & Cybersécurité</h3>
+            <ul class="skills-list">
+                <li>Administration Windows Server (Active Directory, GPO)</li>
+                <li>Gestion serveurs Linux (Debian, Ubuntu)</li>
+                <li>Sécurisation des accès & Authentification MFA</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="veille">
+        <div class="glass-card">
+            <h2>Veille Technologique</h2>
+            <p>Sujet : <strong>L'authentification multifacteur (MFA)</strong></p>
+            <p>Analyse des méthodes de sécurisation des accès (OTP, FIDO2, biométrie) face aux menaces de phishing modernes.</p>
+            <p style="font-size: 0.8rem; color: #999; margin-top: 10px;">Sources : ANSSI, CNIL, Google Alerts.</p>
+            <a href="docs/veille-mfa.pdf" target="_blank" class="btn" style="font-size: 0.7rem; padding: 12px 25px;">Consulter le dossier de veille</a>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="glass-card">
             <h2>Contact</h2>
-            <p>Pour toute collaboration : <strong>sarahnouvian@gmail.com</strong></p>
+            <p>Intéressé par mon profil ? Contactez-moi :</p>
+            <p style="margin-top: 15px; font-weight: 600;">sarahnouvian@gmail.com</p>
         </div>
     </section>
-<section id="veille">
-    <div class="glass-card">
-        <h2>Veille Technologique</h2>
-        <p>Sujet : <strong>L'évolution de la Cybersécurité dans les infrastructures Cloud.</strong></p>
-        <p>Pour me tenir informée, j'utilise des flux RSS via Feedly, je consulte régulièrement les bulletins de l'ANSSI et je suis des experts en sécurité sur LinkedIn.</p>
-        <a href="docs/veille-techno.pdf" target="_blank" class="btn" style="font-size: 0.7rem; padding: 12px 25px;">Consulter ma veille</a>
-    </div>
-</section>
+
     <footer>
-        <p>✨ SARAH NOUVIAN — 2026 ✨</p>
+        <p>✨ SARAH NOUVIAN — Portfolio BTS SIO — 2026 ✨</p>
     </footer>
 
 </body>
