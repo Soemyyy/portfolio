@@ -111,8 +111,7 @@ h1 {
     text-transform: uppercase;
     font-size: 0.9rem;
 }
-
-/* BOUTONS */
+/* STYLE GÉNÉRAL DES BOUTONS */
 .btn {
     display: inline-block;
     padding: 14px 30px;
@@ -124,13 +123,26 @@ h1 {
     text-transform: uppercase;
     font-size: 0.7rem;
     letter-spacing: 1px;
-    transition: 0.4s;
+    transition: all 0.4s ease;
     margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* LE BOUTON "DÉCOUVRIR MON PROFIL" (Effet Glass v2) */
+.btn-outline {
+    background: rgba(255, 255, 255, 0.15) !important; /* Semi-transparent */
+    color: var(--accent-taupe) !important;
+    border: 2px solid var(--accent-taupe) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(93, 64, 55, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(93, 64, 55, 0.3);
+    background: var(--accent-taupe);
+    color: white !important;
 }
 
 /* SECTIONS */
