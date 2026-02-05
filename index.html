@@ -14,14 +14,13 @@
 
     <nav>
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">SN</a>
+            <a href="#hero" class="nav-logo">SN<span>.</span></a>
             <div class="nav-links">
                 <a href="#about">Moi</a>
-                <a href="#path">Stages</a>
+                <a href="#path">Expériences</a>
+                <a href="#skills">Compétences</a>
                 <a href="#projects">Projets</a>
-                <a href="#skills">Skills</a>
                 <a href="#veille">Veille</a>
-                <a href="#contact">Contact</a>
             </div>
         </div>
     </nav>
@@ -31,38 +30,53 @@
             <div class="photo-container">
                 <img src="photo.jpg" alt="Sarah Nouvian" class="photo">
             </div>
+            <div class="badge-bts">Disponible pour Stage / Alternance</div>
             <h1>Sarah Nouvian</h1>
-            <p class="subtitle">Expertise Réseaux & Cybersécurité</p>
+            <p class="subtitle">Future Administratrice Systèmes & Réseaux</p>
             <div class="hero-btns">
-                <a href="cv.pdf" class="btn" target="_blank">Mon CV</a>
-                <a href="#about" class="btn btn-outline">Découvrir ✨</a>
+                <a href="cv.pdf" class="btn pulse" target="_blank"><i class="fas fa-file-download"></i> Mon CV</a>
+                <a href="#about" class="btn btn-outline">Explorer mon univers ✨</a>
             </div>
         </div>
-        <div class="scroll-down">↓</div>
+        <div class="scroll-down">
+            <span>Défiler</span>
+            <div class="mouse"></div>
+        </div>
     </header>
 
     <main class="container">
         <section id="about">
             <h2 class="section-title">À propos de moi</h2>
-            <div class="glass-card">
-                <p>Étudiante en <strong>BTS SIO SISR</strong>, je me passionne pour l'administration des infrastructures et la sécurité des systèmes d'information. Rigoureuse et autonome, je développe mes compétences à travers des projets concrets et une veille constante.</p>
+            <div class="about-grid">
+                <div class="glass-card">
+                    <p>Étudiante passionnée en <strong>BTS SIO SISR</strong>, je m'épanouis dans la résolution de problématiques complexes liées aux infrastructures.</p>
+                    <p>Mon objectif : garantir la haute disponibilité des services tout en plaçant la sécurité au cœur de chaque déploiement.</p>
+                </div>
+                <div class="soft-skills">
+                    <div class="skill-tag">Autonomie</div>
+                    <div class="skill-tag">Rigueur</div>
+                    <div class="skill-tag">Esprit d'équipe</div>
+                    <div class="skill-tag">Curiosité</div>
+                </div>
             </div>
         </section>
 
         <section id="path">
-            <h2 class="section-title">Stages Professionnels</h2>
+            <h2 class="section-title">Expériences Pro</h2>
             <div class="timeline">
                 <div class="glass-card timeline-item">
-                    <span class="date">2025</span>
-                    <h3>Stage de 2ème Année</h3>
-                    <p>Optimisation de l'infrastructure réseau et mise en place de solutions de supervision.</p>
-                    <a href="docs/rapport-stage-2.pdf" target="_blank" class="link-btn">Consulter le rapport →</a>
+                    <div class="timeline-dot"></div>
+                    <span class="date">Mai - Juin 2025</span>
+                    <h3>Stage SISR - Niveau 2</h3>
+                    <p>Audit de sécurité, déploiement de sondes de supervision Nagios et optimisation des flux réseau sous Windows Server 2022.</p>
+                    <a href="docs/rapport-stage-2.pdf" target="_blank" class="link-btn">Voir le livrable <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="glass-card timeline-item">
-                    <span class="date">2024</span>
-                    <h3>Stage de 1ère Année</h3>
-                    <p>Support technique de proximité et maintenance préventive du parc informatique.</p>
-                    <a href="docs/rapport-stage-1.pdf" target="_blank" class="link-btn">Consulter le rapport →</a>
+                    <div class="timeline-dot"></div>
+                    <span class="date">Mai - Juin 2024</span>
+                    <h3>Stage SISR - Niveau 1</h3>
+                    <p>Gestion d'un parc de 150 machines, support utilisateur et déploiement d'images système via WDS/MDT.</p>
+                    <a href="docs/rapport-stage-1.pdf" target="_blank" class="link-btn">Voir le livrable <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -70,83 +84,71 @@
         <section id="skills">
             <h2 class="section-title">Expertise Technique</h2>
             <div class="skills-grid">
-                
                 <div class="glass-card skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Réseaux</h3>
-                    </div>
+                    <i class="fas fa-network-wired"></i>
+                    <h3>Réseaux</h3>
                     <ul class="skill-list-modern">
-                        <li>Configuration Cisco (VLAN, Routage)</li>
-                        <li>Services (DHCP, DNS, SSH, VPN)</li>
-                        <li>Supervision (Nagios, Zabbix)</li>
-                        <li>Pare-feu & Sécurité Flux</li>
+                        <li>VLANs & Routage (Cisco)</li>
+                        <li>Services Infrastructure (DNS, DHCP)</li>
+                        <li>VPN IPsec & OpenVPN</li>
                     </ul>
                 </div>
-
                 <div class="glass-card skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-server"></i>
-                        <h3>Systèmes</h3>
-                    </div>
+                    <i class="fas fa-server"></i>
+                    <h3>Systèmes</h3>
                     <ul class="skill-list-modern">
-                        <li>Active Directory & GPO</li>
-                        <li>Linux (Debian, Ubuntu)</li>
-                        <li>Virtualisation (VMware, ESXi)</li>
-                        <li>Conteneurisation (Docker)</li>
+                        <li>Active Directory & Azure AD</li>
+                        <li>Virtualisation (ESXi, Proxmox)</li>
+                        <li>Scripting (Bash, PowerShell)</li>
                     </ul>
                 </div>
-
                 <div class="glass-card skill-category">
-                    <div class="skill-header">
-                        <i class="fas fa-shield-alt"></i>
-                        <h3>Cybersécurité</h3>
-                    </div>
+                    <i class="fas fa-user-shield"></i>
+                    <h3>Sécurité</h3>
                     <ul class="skill-list-modern">
-                        <li>Authentification MFA / FIDO2</li>
-                        <li>Gestion de parc (GLPI)</li>
-                        <li>Veille ANSSI & CERT-FR</li>
-                        <li>Scripting Bash & Python</li>
+                        <li>Gestion MFA & FIDO2</li>
+                        <li>Supervision Nagios/Zabbix</li>
+                        <li>Audit & Hardening OS</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="projects">
-            <h2 class="section-title">Projets Réalisés</h2>
-            <div class="grid-projects">
-                <div class="glass-card">
-                    <h3>GLPI & Inventaire</h3>
-                    <p>Déploiement d'un inventaire automatisé via GPO.</p>
-                    <a href="docs/mission-glpi.pdf" target="_blank" class="btn-small">Documentation</a>
+            <h2 class="section-title">Réalisations & Veille</h2>
+            <div class="grid-mixed">
+                <div class="glass-card project-main">
+                    <i class="fas fa-tools icon-float"></i>
+                    <h3>Projet GLPI & Inventaire</h3>
+                    <p>Centralisation de la gestion d'actifs informatiques avec remontée automatique des agents via GPO.</p>
+                    <a href="docs/mission-glpi.pdf" target="_blank" class="btn-small">Doc Technique</a>
                 </div>
-                <div class="glass-card">
-                    <h3>Nagios Supervision</h3>
-                    <p>Monitoring temps réel des services serveurs.</p>
-                    <a href="docs/tp-nagios.pdf" target="_blank" class="btn-small">Documentation</a>
+                <div id="veille" class="glass-card veille-card">
+                    <span class="badge">Veille Technologique</span>
+                    <h3>Authentification Multifacteur (MFA)</h3>
+                    <p>Analyse des vecteurs d'attaque et des solutions de remédiation (FIDO2, Biométrie).</p>
+                    <a href="docs/mfa.pdf" target="_blank" class="btn-small btn-light">Lire l'étude</a>
                 </div>
-            </div>
-        </section>
-
-        <section id="veille">
-            <h2 class="section-title">Veille Technologique</h2>
-            <div class="glass-card">
-                <h3>L'Authentification Multifacteur (MFA)</h3>
-                <p>Étude approfondie sur la sécurisation des accès et les nouvelles normes de cybersécurité.</p>
-                <a href="docs/veille-mfa.pdf" target="_blank" class="btn">Consulter la veille</a>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="glass-card contact-card">
-                <h2>Contact</h2>
-                <p>Besoin d'un profil motivé en SISR ?</p>
-                <a href="mailto:sarahnouvian@gmail.com" class="email">sarahnouvian@gmail.com</a>
             </div>
         </section>
     </main>
 
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Sarah Nouvian</h3>
+                <p>Future experte en infrastructure SISR</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:sarahnouvian@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <p class="copyright">✨ Réalisé avec passion — 2026 ✨</p>
+    </footer>
+
     <a href="#hero" class="back-to-top">↑</a>
 
-    <footer>
-        <p>✨ SARAH NOUVIAN — Portfolio BTS SIO SISR — 2026 ✨</p>
+</body>
+</html>
