@@ -86,3 +86,48 @@ section { padding: 100px 0; }
     .nav-links { display: none; }
     h1 { font-size: 2.5rem; }
 }
+.role-subtitle {
+    color: var(--accent-gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.task-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #cbd5e1; /* Gris clair pour la lisibilité */
+}
+
+.task-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent-gold);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag {
+    font-size: 0.7rem;
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
