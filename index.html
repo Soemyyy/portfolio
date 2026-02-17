@@ -2,50 +2,121 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Sarah Nouvian | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Nouvian | Portfolio SISR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="cyber-grid"></div>
 
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo">SN<span>.</span></a>
+            <a href="#hero" class="nav-logo">SN<span>.</span></a>
             <ul class="nav-links">
                 <li><a href="#about">Profil</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#skills">Expertise</a></li>
+                <li><a href="#veille">Veille</a></li>
             </ul>
         </div>
     </nav>
 
-    <header>
+    <header id="hero">
         <div class="photo-container">
-            <img src="photo.jpg" alt="Sarah" class="photo">
+            <img src="photo.jpg" alt="Sarah Nouvian" class="photo">
         </div>
         <h1>Sarah Nouvian</h1>
-        <p>Technicienne Système & Réseaux</p>
+        <p class="subtitle">Technicienne Système & Réseaux (SISR)</p>
+        <div style="margin-top: 30px;">
+            <a href="cv.pdf" class="btn" target="_blank">Mon CV</a>
+        </div>
     </header>
 
     <main class="container">
+        
         <section id="about" class="reveal">
             <h2 class="section-title">À propos</h2>
             <div class="glass-card">
-                <p>Étudiante en BTS SIO SISR...</p>
+                <p>Étudiante en 2ème année de <strong>BTS SIO (SISR)</strong>, je me spécialise dans l'administration d'infrastructures sécurisées. Mon expérience en milieu associatif m'a permis de développer une approche alliant rigueur technique et accompagnement utilisateur.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="reveal">
+            <h2 class="section-title">Expériences Pro</h2>
+            <div class="glass-card">
+                <span style="color: var(--gold); font-weight: bold;">Juin - Juillet 2025</span>
+                <h3 style="margin: 10px 0;">Fédération des Centres Sociaux de la Nièvre</h3>
+                <p style="color: #94a3b8; margin-bottom: 15px;">Stagiaire Administrateur Systèmes et Réseaux</p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 10px;">▹ <strong>Audit Réseau :</strong> Restructuration de la baie de brassage (étiquetage et schématisation).</li>
+                    <li style="margin-bottom: 10px;">▹ <strong>Migration Cloud :</strong> Transfert de données vers Google Workspace et gestion des droits.</li>
+                    <li style="margin-bottom: 10px;">▹ <strong>Sécurité :</strong> Déploiement de Bitwarden et mise en place de l'authentification MFA/2FA.</li>
+                </ul>
             </div>
         </section>
 
         <section id="skills" class="reveal">
-            <h2 class="section-title">Expertise</h2>
+            <h2 class="section-title">Expertise Technique</h2>
             <div class="skills-grid">
+                
                 <div class="glass-card">
-                    <h3>Réseau</h3>
-                    <div class="progress-bar">
-                        <div class="progress" data-width="90%"></div>
+                    <i class="fas fa-network-wired" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+                    <h3>Infrastructure</h3>
+                    <div style="margin-top: 15px;">
+                        <span style="font-size: 0.8rem; color: #94a3b8;">Câblage & Brassage</span>
+                        <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <span style="font-size: 0.8rem; color: #94a3b8;">Administration SaaS</span>
+                        <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
                     </div>
                 </div>
+
+                <div class="glass-card">
+                    <i class="fas fa-user-shield" style="font-size: 2rem; color: var(--gold); margin-bottom: 15px;"></i>
+                    <h3>Sécurité</h3>
+                    <div style="margin-top: 15px;">
+                        <span style="font-size: 0.8rem; color: #94a3b8;">MFA / FIDO2</span>
+                        <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <span style="font-size: 0.8rem; color: #94a3b8;">Gestion des secrets</span>
+                        <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                    </div>
+                </div>
+
             </div>
         </section>
+
+        <section id="veille" class="reveal">
+            <h2 class="section-title">Veille Technologique</h2>
+            <div class="glass-card">
+                <h3>L'Authentification Multifacteur (MFA)</h3>
+                <p>Analyse des méthodes de sécurisation des identités pour contrer les cyberattaques modernes (Phishing, Brute force).</p>
+                <p style="margin-top: 10px; font-size: 0.8rem; color: #94a3b8;"><em>Outils : Feedly, Alertes CERT-FR.</em></p>
+            </div>
+        </section>
+
     </main>
+
+    <footer>
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2026 Sarah Nouvian - BTS SIO SISR</p>
+            <a href="#" id="open-legal" style="color: var(--gold); text-decoration: none; font-size: 0.8rem;">Mentions Légales</a>
+        </div>
+    </footer>
+
+    <div id="legal-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" style="float: right; cursor: pointer; font-size: 1.5rem;">&times;</span>
+            <h2 style="color: var(--gold);">Mentions Légales</h2>
+            <p>Éditeur : Sarah Nouvian</p>
+            <p>Hébergement : GitHub Pages</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
