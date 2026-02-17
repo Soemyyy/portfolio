@@ -1,43 +1,3 @@
-/* ── CUSTOM CURSOR ─────────────────────────────────── */
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx = -100, my = -100, rx = -100, ry = -100;
-
-// Caché par défaut, visible au premier mouvement
-cursor.style.opacity = '0';
-ring.style.opacity = '0';
-
-document.addEventListener('mousemove', e => {
-    mx = e.clientX;
-    my = e.clientY;
-    cursor.style.left = mx - 5 + 'px';
-    cursor.style.top  = my - 5 + 'px';
-    cursor.style.opacity = '1';
-    ring.style.opacity = '0.7';
-});
-
-function animRing() {
-    rx += (mx - rx) * 0.15;
-    ry += (my - ry) * 0.15;
-    ring.style.left = rx - 18 + 'px';
-    ring.style.top  = ry - 18 + 'px';
-    requestAnimationFrame(animRing);
-}
-animRing();
-
-document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'scale(2)';
-        ring.style.transform = 'scale(1.4)';
-        ring.style.opacity = '1';
-    });
-    el.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'scale(1)';
-        ring.style.transform = 'scale(1)';
-        ring.style.opacity = '0.7';
-    });
-});
-
 /* ── REVEAL AU SCROLL ──────────────────────────────── */
 // On cache d'abord via JS, puis on anime — si JS est désactivé, tout reste visible
 document.querySelectorAll('.reveal').forEach(el => el.classList.add('hidden'));
@@ -58,7 +18,21 @@ window.addEventListener('scroll', () => {
     nav.style.background = window.scrollY > 50
         ? 'rgba(6, 8, 16, 0.95)'
         : 'rgba(6, 8, 16, 0.7)';
+
+    // Bouton retour en haut
+    const btn = document.getElementById('backToTop');
+    if (btn) {
+        btn.classList.toggle('visible', window.scrollY > 400);
+    }
 });
+
+/* ── BOUTON RETOUR EN HAUT ─────────────────────────── */
+const backToTop = document.getElementById('backToTop');
+if (backToTop) {
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
 
 /* ── MODALE MENTIONS LÉGALES ───────────────────────── */
 const modal = document.getElementById('legalModal');
