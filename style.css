@@ -732,6 +732,35 @@ footer {
 }
 .modal-close:hover { color: var(--gold); }
 
+/* ── BOUTON RETOUR EN HAUT ──────────────────────────── */
+#backToTop {
+    position: fixed;
+    bottom: 32px; right: 32px;
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: #060810;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: none;
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s, background 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 20px var(--gold-glow);
+    pointer-events: none;
+}
+#backToTop.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+#backToTop:hover {
+    background: var(--gold2);
+    box-shadow: 0 4px 30px rgba(245, 200, 66, 0.5);
+}
+
 /* ── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 700px) {
     .about-grid { grid-template-columns: 1fr; }
