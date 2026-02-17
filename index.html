@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Nouvian | Experte Système & Réseaux (SISR)</title>
+    <title>Sarah Nouvian | Portfolio SISR</title>
+    <meta name="description" content="Portfolio de Sarah Nouvian, étudiante en BTS SIO SISR spécialisée en infrastructure, réseaux et cybersécurité.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -17,30 +18,26 @@
         <div class="nav-container">
             <a href="#hero" class="nav-logo">SN<span>.</span></a>
             <ul class="nav-links">
-                <li><a href="#about">Moi</a></li>
-                <li><a href="#path">Stages</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets</a></li>
+                <li><a href="#about">Profil</a></li>
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#skills">Expertise</a></li>
                 <li><a href="#veille">Veille</a></li>
             </ul>
         </div>
     </nav>
 
     <header id="hero">
-        <div class="hero-content animate-init">
+        <div class="hero-content">
             <div class="photo-container">
                 <img src="photo.jpg" alt="Sarah Nouvian" class="photo">
             </div>
             <h1>Sarah Nouvian</h1>
-            <p class="subtitle">Étudiante en BTS SIO SISR</p>
+            <p class="subtitle">Technicienne Système & Réseaux (SISR)</p>
             <div class="hero-btns">
-                <a href="cv.pdf" class="btn" target="_blank"><i class="fas fa-file-download"></i> Mon CV</a>
-                <a href="#about" class="btn btn-outline">Découvrir mon profil</a>
+                <a href="cv.pdf" class="btn" target="_blank"><i class="fas fa-download"></i> Mon CV</a>
+                <a href="#experience" class="btn btn-outline">Voir mes projets</a>
             </div>
         </div>
-        <a href="#about" class="scroll-down">
-            <div class="mouse"></div>
-        </a>
     </header>
 
     <main class="container">
@@ -49,147 +46,85 @@
             <h2 class="section-title">À propos</h2>
             <div class="about-grid">
                 <div class="glass-card">
-                    <p>Actuellement en 2ème année de <strong>BTS SIO (option SISR)</strong>, je me spécialise dans l'administration des systèmes et la cybersécurité. Mon objectif : garantir la haute disponibilité et la sécurité des infrastructures critiques.</p>
+                    <p>Étudiante en 2ème année de <strong>BTS SIO (SISR)</strong>, je me passionne pour la sécurisation des infrastructures et l'optimisation des environnements collaboratifs. Mon approche allie rigueur technique et pédagogie utilisateur.</p>
                 </div>
                 <div class="soft-skills">
-                    <span class="skill-tag">Autonomie</span>
-                    <span class="skill-tag">Rigueur</span>
-                    <span class="skill-tag">Curiosité</span>
-                    <span class="skill-tag">Analyse</span>
+                    <span class="skill-tag">Analyse Réseau</span>
+                    <span class="skill-tag">Sécurisation</span>
+                    <span class="skill-tag">Documentation</span>
+                    <span class="skill-tag">Pédagogie</span>
                 </div>
             </div>
         </section>
 
-        <section id="path" class="reveal">
-    <h2 class="section-title">Expériences Pro</h2>
-    <div class="timeline">
-        <article class="glass-card timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="date">Juin - Juillet 2025</span>
-            <h3>Fédération des Centres Sociaux de la Nièvre</h3>
-            <p class="role-subtitle">Stagiaire Administrateur Systèmes et Réseaux</p>
-            
-            <ul class="task-list">
-                <li><strong>Infrastructure Physique :</strong> Audit, déconnexion méthodique et réorganisation complète d'une baie de brassage en désordre. Étiquetage des ports et établissement d'un schéma de connexion pour la maintenance.</li>
-                <li><strong>Migration Cloud :</strong> Étude comparative (Google Drive, iCloud, KDrive) et migration de l'arborescence documentaire vers Google Workspace.</li>
-                <li><strong>Gestion des Identités :</strong> Création de comptes professionnels, configuration des droits d'accès (Lecteur/Éditeur/Admin) et sécurisation via l'authentification 2FA.</li>
-                <li><strong>Cybersécurité :</strong> Déploiement du gestionnaire de mots de passe <strong>Bitwarden</strong> et sensibilisation des utilisateurs aux bonnes pratiques d'hygiène informatique.</li>
-                <li><strong>Support & Documentation :</strong> Rédaction de guides utilisateurs illustrés et de procédures techniques pour l'autonomie de la structure.</li>
-            </ul>
-            
-            <div class="project-tags">
-                <span class="tag">Baie de brassage</span>
-                <span class="tag">Google Workspace</span>
-                <span class="tag">Bitwarden</span>
-                <span class="tag">Documentation</span>
+        <section id="experience" class="reveal">
+            <h2 class="section-title">Expériences Pro</h2>
+            <div class="timeline">
+                <article class="glass-card timeline-item">
+                    <div class="timeline-dot"></div>
+                    <span class="date">Juin - Juillet 2025</span>
+                    <h3>Fédération des Centres Sociaux de la Nièvre</h3>
+                    <p class="role-subtitle">Stagiaire Administrateur Systèmes et Réseaux</p>
+                    
+                    <ul class="task-list">
+                        <li><strong>Audit Réseau :</strong> Restructuration physique de la baie de brassage (tri, étiquetage et schématisation des ports actifs).</li>
+                        <li><strong>Ingénierie Documentaire :</strong> Migration et fusion de données vers Google Workspace avec création d'une arborescence logique.</li>
+                        <li><strong>Administration SaaS :</strong> Gestion des privilèges utilisateurs et configuration des groupes de sécurité.</li>
+                        <li><strong>Cybersécurité :</strong> Déploiement de Bitwarden et activation du MFA pour la protection des accès critiques.</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span class="tag">Baie de brassage</span>
+                        <span class="tag">Google Workspace</span>
+                        <span class="tag">MFA</span>
+                        <span class="tag">Bitwarden</span>
+                    </div>
+                </article>
             </div>
-        </article>
-
-        <article class="glass-card timeline-item">
-            <div class="timeline-dot"></div>
-            <span class="date">2026</span>
-            <h3>Stage de 2ème Année</h3>
-            <p>Section en attente de vos nouvelles missions (Supervision, Virtualisation, Cybersécurité avancée).</p>
-        </article>
-    </div>
-</section>
+        </section>
 
         <section id="skills" class="reveal">
             <h2 class="section-title">Expertise Technique</h2>
             <div class="skills-grid">
                 <div class="glass-card skill-category">
                     <i class="fas fa-network-wired"></i>
-                    <h3>Réseaux</h3>
+                    <h3>Infrastructure</h3>
                     <ul class="skill-list-modern">
-                        <li>VLANs & Routage (Cisco)</li>
-                        <li>Services (DNS, DHCP, LDAP)</li>
-                        <li>VPN IPsec & Firewalls</li>
+                        <li>Brassage & Câblage structuré</li>
+                        <li>Schématisation réseau</li>
+                        <li>VLANs & Routage (Cisco/TP)</li>
                     </ul>
                 </div>
                 <div class="glass-card skill-category">
-                    <i class="fas fa-server"></i>
-                    <h3>Systèmes</h3>
-                    <ul class="skill-list-modern">
-                        <li>Active Directory & GPO</li>
-                        <li>Linux Debian / Ubuntu Server</li>
-                        <li>Virtualisation ESXi / Proxmox</li>
-                    </ul>
-                </div>
-                <div class="glass-card skill-category">
-                    <i class="fas fa-user-shield"></i>
+                    <i class="fas fa-shield-alt"></i>
                     <h3>Sécurité</h3>
                     <ul class="skill-list-modern">
-                        <li>Protocoles MFA & FIDO2</li>
-                        <li>Analyse de vulnérabilités</li>
-                        <li>Veille CERT-FR / ANSSI</li>
+                        <li>Authentification MFA / 2FA</li>
+                        <li>Gestion des secrets (Bitwarden)</li>
+                        <li>Protection des données (CNIL)</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="reveal">
-            <h2 class="section-title">Projets & Veille</h2>
-            <div class="grid-mixed">
-                <div class="glass-card">
-                    <span class="badge">Infrastucture</span>
-                    <h3>Déploiement GLPI</h3>
-                    <p>Mise en place d'un inventaire automatisé avec agent OCS.</p>
-                    <a href="docs/mission-glpi.pdf" target="_blank" class="btn-small">Voir le projet</a>
+        <section id="veille" class="reveal">
+            <h2 class="section-title">Veille Technologique</h2>
+            <div class="glass-card">
+                <h3>L'Authentification Multifacteur (MFA)</h3>
+                <p>Suivi des évolutions sur la gestion des identités et la résistance des utilisateurs face aux contraintes de sécurité.</p>
+                <div class="veille-methods">
+                    <strong>Méthodologie :</strong> Curation via <strong>Feedly</strong>, suivi des alertes du <strong>CERT-FR</strong> et veille active sur les standards <strong>FIDO2 / Passkeys</strong>.
                 </div>
-            <section id="veille" class="reveal">
-    <h2 class="section-title">Veille Technologique</h2>
-    <div class="glass-card">
-        <div class="veille-header">
-            <span class="badge">Sujet Majeur</span>
-            <h3>L'Authentification Multifacteur (MFA)</h3>
-        </div>
-        <p>Analyse de l'évolution des méthodes d'accès sécurisées et de la résistance des utilisateurs face aux contraintes de cybersécurité.</p>
-        
-        <div class="veille-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
-            <div class="method-box">
-                <h4><i class="fas fa-search"></i> Méthodologie</h4>
-                <ul class="skill-list-modern">
-                    <li>Flux RSS : ANSSI, Cybersécurité-Mag</li>
-                    <li>Outils : Feedly & Pocket</li>
-                    <li>Veille active sur les standards FIDO2</li>
-                </ul>
-            </div>
-            <div class="focus-box">
-                <h4><i class="fas fa-bullseye"></i> Focus Technique</h4>
-                <ul class="skill-list-modern">
-                    <li>Gestion des secrets (Bitwarden)</li>
-                    <li>Sécurisation SaaS (Google Workspace)</li>
-                    <li>Protocoles TOTP & Push</li>
-                </ul>
-            </div>
-        </div>
-        <a href="docs/veille_mfa_sarah_nouvian.pdf" target="_blank" class="btn" style="margin-top: 20px; display: inline-block;">Consulter la synthèse de veille</a>
-    </div>
-</section>
             </div>
         </section>
+
     </main>
 
     <footer>
-        <div class="footer-content">
-            <div>
-                <h3>Sarah Nouvian</h3>
-                <p>Candidate SISR 2026</p>
-            </div>
-            <div class="footer-links">
-                <a href="mailto:sarahnouvian@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
+        <p>© 2026 — Sarah Nouvian</p>
+        <div class="footer-links">
+            <a href="mailto:sarahnouvian@gmail.com"><i class="fas fa-envelope"></i> Contact</a>
         </div>
-
-        <div class="mentions-container">
-            <h4>Mentions Légales</h4>
-            <p>Hébergé par GitHub Pages. Contenu réalisé dans un cadre pédagogique.</p>
-        </div>
-        <p class="copyright">© 2026 — Design & Code par Sarah Nouvian</p>
     </footer>
-
-    <a href="#hero" class="back-to-top" id="backToTop">↑</a>
 
     <script src="script.js"></script>
 </body>
