@@ -1,13 +1,10 @@
-/* =========================================
-   VARIABLES & SETUP
-   ========================================= */
 :root {
-    --bg: #020617; /* Fond ultra-sombre pour le contraste Cyber */
+    --bg: #020617; 
     --gold: #fbbf24;
-    --gold-dim: rgba(251, 191, 36, 0.1);
+    --gold-glow: rgba(251, 191, 36, 0.15);
     --text: #f8fafc;
-    --glass: rgba(255, 255, 255, 0.03);
-    --border: rgba(255, 255, 255, 0.08);
+    --glass: rgba(15, 23, 42, 0.7);
+    --border: rgba(251, 191, 36, 0.2);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,62 +13,66 @@ html { scroll-behavior: smooth; }
 body { 
     font-family: 'Inter', sans-serif; 
     color: var(--text); 
-    line-height: 1.6; 
     background-color: var(--bg);
     overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
 }
 
 /* =========================================
-   FOND CYBERNÉTIQUE (ANIMÉ)
+   LE FOND "CYBER-DYNAMIQUE" (TRÈS VISIBLE)
    ========================================= */
-/* La Grille en perspective */
+
+/* 1. La Grille Néon inclinée */
 .cyber-grid {
     position: fixed;
-    inset: 0;
+    bottom: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
     background-image: 
-        linear-gradient(var(--gold-dim) 1px, transparent 1px),
-        linear-gradient(90deg, var(--gold-dim) 1px, transparent 1px);
-    background-size: 60px 60px;
-    transform: perspective(500px) rotateX(60deg) translateY(-100px);
-    transform-origin: top;
+        linear-gradient(var(--gold-glow) 2px, transparent 2px),
+        linear-gradient(90deg, var(--gold-glow) 2px, transparent 2px);
+    background-size: 80px 80px;
+    transform: perspective(400px) rotateX(60deg);
+    transform-origin: bottom;
     z-index: -2;
-    animation: gridMove 20s linear infinite;
-    opacity: 0.4;
+    animation: gridMove 10s linear infinite;
 }
 
 @keyframes gridMove {
     from { background-position: 0 0; }
-    to { background-position: 0 60px; }
+    to { background-position: 0 80px; }
 }
 
-/* Effet de balayage (Scanline) */
-.scanline {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 10px;
-    background: linear-gradient(to bottom, transparent, rgba(251, 191, 36, 0.05), transparent);
-    z-index: -1;
-    opacity: 0.5;
-    animation: scanMove 6s linear infinite;
-}
-
-@keyframes scanMove {
-    0% { transform: translateY(-100vh); }
-    100% { transform: translateY(100vh); }
-}
-
-/* Vignettage pour focaliser le regard au centre */
-body::after {
+/* 2. Lueur qui suit le scroll (Gradient radial) */
+body::before {
     content: "";
     position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(30, 41, 59, 0.5) 0%, var(--bg) 80%);
+    z-index: -3;
+}
+
+/* 3. Lignes de Scan horizontales (Style CRT) */
+.scanline {
+    position: fixed;
     inset: 0;
-    background: radial-gradient(circle at center, transparent 20%, rgba(2, 6, 23, 0.8) 100%);
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.3) 51%,
+        transparent 51%
+    );
+    background-size: 100% 4px;
+    z-index: 1000;
     pointer-events: none;
-    z-index: -1;
+    opacity: 0.15;
 }
 
 /* =========================================
-   NAVIGATION
+   NAVIGATION & CARTES
    ========================================= */
 nav { 
     position: fixed; 
@@ -79,107 +80,55 @@ nav {
     transform: translateX(-50%); 
     width: 90%; max-width: 900px; 
     padding: 15px 30px; 
-    background: rgba(15, 23, 42, 0.7); 
+    background: var(--glass); 
     backdrop-filter: blur(15px); 
     border-radius: 50px; 
     border: 1px solid var(--border); 
-    z-index: 1000; 
+    z-index: 2000; 
 }
 
 .nav-container { display: flex; justify-content: space-between; align-items: center; }
-.nav-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; text-decoration: none; color: #fff; font-weight: bold; }
+.nav-logo { font-size: 1.5rem; text-decoration: none; color: #fff; font-weight: bold; font-family: 'Playfair Display', serif;}
 .nav-logo span { color: var(--gold); }
 .nav-links { display: flex; list-style: none; gap: 20px; }
-.nav-links a { text-decoration: none; color: var(--text); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
-.nav-links a:hover { color: var(--gold); text-shadow: 0 0 10px var(--gold); }
+.nav-links a { text-decoration: none; color: var(--text); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; }
 
-/* =========================================
-   HERO / HEADER
-   ========================================= */
-header { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
-.photo-container { 
-    width: 140px; height: 140px; 
-    border-radius: 50%; border: 2px solid var(--gold); 
-    margin: 0 auto 20px; overflow: hidden; 
-    box-shadow: 0 0 30px rgba(251, 191, 36, 0.2);
-}
-.photo { width: 100%; height: 100%; object-fit: cover; }
-h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 8vw, 3.5rem); margin-bottom: 10px; }
-.subtitle { color: #94a3b8; letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; }
-
-/* =========================================
-   SECTIONS & CARTES
-   ========================================= */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-section { padding: 100px 0; }
-.section-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 60px; color: var(--gold); text-align: center; }
+header { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; }
 
 .glass-card { 
-    background: var(--glass); 
+    background: rgba(15, 23, 42, 0.8); 
     backdrop-filter: blur(10px); 
     border: 1px solid var(--border); 
     border-radius: 20px; 
     padding: 40px; 
-    transition: 0.3s ease-out; 
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.glass-card:hover { border-color: var(--gold); background: rgba(255,255,255,0.05); }
-
-/* BARRES DE PROGRESSION */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-.card-icon { font-size: 2.5rem; color: var(--gold); margin-bottom: 20px; }
-.skill-item { margin-bottom: 20px; }
-.skill-item span { font-size: 0.85rem; display: block; margin-bottom: 8px; color: #94a3b8; }
-.progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.05); border-radius: 10px; overflow: hidden; }
-.progress { 
-    height: 100%; background: linear-gradient(90deg, var(--gold), #f59e0b); 
-    transform: scaleX(0); transform-origin: left; 
-    transition: transform 1.5s cubic-bezier(0.17, 0.55, 0.55, 1); 
-}
-.reveal.active .progress { transform: scaleX(1); }
-
-/* EXPÉRIENCE LISTES */
-.task-list { list-style: none; margin-top: 20px; }
-.task-list li { margin-bottom: 10px; position: relative; padding-left: 20px; }
-.task-list li::before { content: "▹"; position: absolute; left: 0; color: var(--gold); }
-
-/* =========================================
-   BOUTONS & TAGS
-   ========================================= */
-.btn { 
-    padding: 12px 28px; background: var(--gold); color: #020617; 
-    text-decoration: none; border-radius: 8px; font-weight: 700; 
-    display: inline-block; transition: 0.3s;
-}
-.btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.3); }
-
-.tag { 
-    font-size: 0.7rem; border: 1px solid var(--gold); color: var(--gold); 
-    padding: 4px 12px; border-radius: 4px; margin: 5px 5px 0 0; 
-    display: inline-block; text-transform: uppercase;
+.glass-card:hover { 
+    border-color: var(--gold); 
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.1);
 }
 
-/* =========================================
-   FOOTER & MODALE
-   ========================================= */
-footer { background: rgba(2, 6, 23, 0.9); border-top: 1px solid var(--border); padding: 80px 0 30px; }
-.footer-bottom { text-align: center; margin-top: 50px; color: #475569; font-size: 0.8rem; }
+/* BARRES DE SKILLS */
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.progress-bar { width: 100%; height: 8px; background: #1e293b; border-radius: 10px; margin-top: 10px; }
+.progress { height: 100%; background: var(--gold); border-radius: 10px; width: 0; transition: width 2s ease-out; box-shadow: 0 0 10px var(--gold); }
 
-.modal { 
-    display: none; position: fixed; z-index: 9999; inset: 0; 
-    background: rgba(2, 6, 23, 0.95); backdrop-filter: blur(10px); 
-}
-.modal-content { max-width: 600px; margin: 10% auto; padding: 40px; position: relative; border: 1px solid var(--gold); border-radius: 20px; }
-.close-modal { position: absolute; top: 20px; right: 20px; font-size: 2rem; cursor: pointer; color: var(--gold); }
+.section-title { font-size: 3rem; color: var(--gold); text-align: center; margin-bottom: 50px; text-shadow: 0 0 20px rgba(251, 191, 36, 0.4); }
 
-/* ANIMATIONS */
-.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+.btn { padding: 12px 30px; background: var(--gold); color: #000; font-weight: bold; border-radius: 5px; text-decoration: none; display: inline-block; transition: 0.3s; }
+.btn:hover { box-shadow: 0 0 20px var(--gold); transform: translateY(-3px); }
+
+/* ANIMATION D'APPARITION */
+.reveal { opacity: 0; transform: translateY(50px); transition: 1s ease-out; }
 .reveal.active { opacity: 1; transform: translateY(0); }
+.reveal.active .progress { width: var(--target-width); } /* Géré par le HTML style="--target-width: 90%" */
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    h1 { font-size: 2.5rem; }
-}
+/* FOOTER */
+footer { background: #010409; padding: 50px 0; border-top: 2px solid var(--border); margin-top: 50px; }
+
+/* MODAL */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 9999; backdrop-filter: blur(10px); }
+.modal-content { background: var(--bg); border: 1px solid var(--gold); padding: 40px; max-width: 600px; margin: 10% auto; border-radius: 20px; }
