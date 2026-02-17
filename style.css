@@ -554,6 +554,21 @@ section { margin-bottom: 120px; }
     margin-bottom: 20px;
 }
 .project-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.project-link {
+    display: inline-flex; align-items: center;
+    margin-top: 18px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--gold);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    transition: gap 0.3s, opacity 0.3s;
+    gap: 6px;
+}
+.project-link:hover {
+    opacity: 0.7;
+    gap: 10px;
+}
 .tag {
     padding: 4px 12px;
     border-radius: 100px;
