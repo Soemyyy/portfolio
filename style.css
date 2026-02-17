@@ -27,24 +27,24 @@ body {
 
 /* ── CUSTOM CURSOR ─────────────────────────────────── */
 .cursor {
-    width: 8px; height: 8px;
+    width: 10px; height: 10px;
     background: var(--gold);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     z-index: 9999;
     transition: transform 0.15s ease;
-    mix-blend-mode: difference;
+    box-shadow: 0 0 10px var(--gold), 0 0 20px var(--gold-glow);
 }
 .cursor-ring {
-    width: 32px; height: 32px;
-    border: 1px solid var(--gold);
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--gold);
     border-radius: 50%;
     position: fixed;
     pointer-events: none;
     z-index: 9998;
-    transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67), opacity 0.3s;
-    opacity: 0.5;
+    transition: left 0.12s ease, top 0.12s ease, transform 0.3s ease, opacity 0.3s;
+    opacity: 0.7;
 }
 
 /* ── BACKGROUND ─────────────────────────────────────── */
