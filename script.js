@@ -1,13 +1,19 @@
 /* ── CUSTOM CURSOR ─────────────────────────────────── */
 const cursor = document.getElementById('cursor');
 const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
+let mx = -100, my = -100, rx = -100, ry = -100;
+
+// Caché par défaut, visible au premier mouvement
+cursor.style.opacity = '0';
+ring.style.opacity = '0';
 
 document.addEventListener('mousemove', e => {
     mx = e.clientX;
     my = e.clientY;
     cursor.style.left = mx - 5 + 'px';
     cursor.style.top  = my - 5 + 'px';
+    cursor.style.opacity = '1';
+    ring.style.opacity = '0.7';
 });
 
 function animRing() {
