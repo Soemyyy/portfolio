@@ -25,6 +25,9 @@ document.querySelectorAll('a, button').forEach(el => {
 });
 
 /* ── REVEAL AU SCROLL ──────────────────────────────── */
+// On cache d'abord via JS, puis on anime — si JS est désactivé, tout reste visible
+document.querySelectorAll('.reveal').forEach(el => el.classList.add('hidden'));
+
 const observer = new IntersectionObserver(entries => {
     entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
