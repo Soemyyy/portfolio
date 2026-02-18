@@ -25,6 +25,60 @@ body {
     cursor: none;
 }
 
+/* ── LOADER INTRO ───────────────────────────────────── */
+.loader {
+    position: fixed;
+    inset: 0;
+    background: #060810;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+#particlesCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+.logo-text {
+    font-family: 'Syne', sans-serif;
+    font-size: 12rem;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    position: relative;
+    z-index: 2;
+    text-shadow: 
+        0 0 20px var(--gold),
+        0 0 40px var(--gold),
+        0 0 60px var(--gold-glow),
+        0 0 100px var(--gold-glow);
+    animation: logoGlow 2s ease-in-out infinite alternate;
+}
+@keyframes logoGlow {
+    0% { 
+        text-shadow: 
+            0 0 20px var(--gold),
+            0 0 40px var(--gold),
+            0 0 60px var(--gold-glow),
+            0 0 100px var(--gold-glow);
+    }
+    100% { 
+        text-shadow: 
+            0 0 30px var(--gold),
+            0 0 60px var(--gold),
+            0 0 90px var(--gold),
+            0 0 120px var(--gold);
+    }
+}
+
 /* ── CUSTOM CURSOR ─────────────────────────────────── */
 .cursor {
     width: 10px; height: 10px;
