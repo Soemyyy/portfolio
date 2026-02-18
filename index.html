@@ -538,8 +538,18 @@
             canvas.width = window.innerWidth;
             canvas.height = window.innerHeight;
 
-            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-            const charArray = chars.split('');
+            // Real code snippets
+            const codeSnippets = [
+                'if', 'else', 'for', 'while', 'function', 'return', 'const', 'let', 'var',
+                'class', 'import', 'export', 'async', 'await', 'try', 'catch',
+                '{', '}', '(', ')', '[', ']', ';', ':', '=', '+', '-', '*', '/',
+                '==', '!=', '&&', '||', '=>', '...', 'true', 'false', 'null',
+                '0', '1', '01', '10', '101', '010', '001', '110', '011', '100',
+                'ssh', 'ping', 'sudo', 'chmod', 'grep', 'ls', 'cd', 'pwd',
+                'SELECT', 'FROM', 'WHERE', 'INSERT', 'UPDATE', 'DELETE',
+                'TCP', 'UDP', 'IP', 'DNS', 'HTTP', 'HTTPS', 'SSH', 'FTP'
+            ];
+            
             const fontSize = 14;
             const columns = Math.floor(canvas.width / fontSize);
             const drops = Array(columns).fill(1);
@@ -548,10 +558,10 @@
                 ctx.fillStyle = 'rgba(6, 8, 16, 0.05)';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                ctx.font = fontSize + 'px monospace';
+                ctx.font = fontSize + 'px "DM Mono", monospace';
 
                 for (let i = 0; i < drops.length; i++) {
-                    const text = charArray[Math.floor(Math.random() * charArray.length)];
+                    const text = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
                     const x = i * fontSize;
                     const y = drops[i] * fontSize;
 
