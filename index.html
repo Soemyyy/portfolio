@@ -13,6 +13,7 @@
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
+    <canvas id="matrixCanvas"></canvas>
     <div class="grid-bg"></div>
 
     <!-- ── NAV ─────────────────────────────────────── -->
@@ -526,6 +527,57 @@
                 });
             });
         });
+    </script>
+    <!-- Matrix Effect -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('matrixCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            const charArray = chars.split('');
+            const fontSize = 14;
+            const columns = Math.floor(canvas.width / fontSize);
+            const drops = Array(columns).fill(1);
+
+            function draw() {
+                ctx.fillStyle = 'rgba(6, 8, 16, 0.05)';
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = charArray[Math.floor(Math.random() * charArray.length)];
+                    const x = i * fontSize;
+                    const y = drops[i] * fontSize;
+
+                    // Gradient gold effect
+                    const gradient = ctx.createLinearGradient(x, y - fontSize * 10, x, y);
+                    gradient.addColorStop(0, 'rgba(245, 200, 66, 0.1)');
+                    gradient.addColorStop(0.5, 'rgba(245, 200, 66, 0.6)');
+                    gradient.addColorStop(1, 'rgba(245, 200, 66, 1)');
+                    ctx.fillStyle = gradient;
+
+                    ctx.fillText(text, x, y);
+
+                    if (y > canvas.height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+
+            setInterval(draw, 33);
+
+            window.addEventListener('resize', function() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        })();
     </script>
 
 </body>
