@@ -10,6 +10,12 @@
 </head>
 <body>
 
+    <!-- ── LOADER INTRO ─────────────────────────────────── -->
+    <div id="loader" class="loader">
+        <canvas id="particlesCanvas"></canvas>
+        <div class="logo-text">SN</div>
+    </div>
+
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
 
@@ -443,8 +449,8 @@
                     Disponible pour des projets, une alternance ou simplement pour échanger sur la cybersécurité et les systèmes.
                 </p>
                 <div class="contact-links">
-                    <a href="mailto:sarahnouvian@gmail.com" class="contact-link email">
-                        ✉️ sarahnouvian@gmail.com
+                    <a href="/cdn-cgi/l/email-protection#abd8cad9cac3c5c4deddc2cac5ebccc6cac2c785c8c4c6" class="contact-link email">
+                        ✉️ <span class="__cf_email__" data-cfemail="76051704171e181903001f171836111b171f1a5815191b">[email&#160;protected]</span>
                     </a>
                     <a href="cv.pdf" download class="contact-link ghost">
                         📄 Télécharger mon CV
@@ -463,7 +469,7 @@
 
     <!-- ── FOOTER ────────────────────────────────────── -->
     <footer>
-        <p>© 2026 Sarah Nouvian · Portfolio BTS SIO SISR · Construit avec ❤️</p>
+        <p>© 2026 Sarah Nouvian · <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7a091b081b1214150f0c131b143a1d171b131654191517">[email&#160;protected]</a> · Portfolio BTS SIO SISR · Construit avec ❤️</p>
     </footer>
 
     <!-- ── MODALE ────────────────────────────────────── -->
@@ -484,7 +490,7 @@
     <!-- ── BOUTON RETOUR EN HAUT ──────────────────────── -->
     <button id="backToTop" aria-label="Retour en haut">↑</button>
 
-    <script src="script.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
 
     <!-- Curseur inline -->
     <script>
@@ -528,6 +534,79 @@
             });
         });
     </script>
+    <!-- Loader Particles Animation -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('particlesCanvas');
+            const loader = document.getElementById('loader');
+            if (!canvas || !loader) return;
+
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const particleCount = 150;
+            const centerX = canvas.width / 2;
+            const centerY = canvas.height / 2;
+
+            class Particle {
+                constructor() {
+                    this.reset();
+                    this.x = Math.random() * canvas.width;
+                    this.y = Math.random() * canvas.height;
+                }
+                reset() {
+                    this.targetX = centerX + (Math.random() - 0.5) * 200;
+                    this.targetY = centerY + (Math.random() - 0.5) * 200;
+                    this.size = Math.random() * 3 + 1;
+                    this.speedX = (Math.random() - 0.5) * 2;
+                    this.speedY = (Math.random() - 0.5) * 2;
+                    this.opacity = Math.random() * 0.5 + 0.5;
+                }
+                update() {
+                    this.x += (this.targetX - this.x) * 0.05;
+                    this.y += (this.targetY - this.y) * 0.05;
+                }
+                draw() {
+                    ctx.fillStyle = `rgba(245, 200, 66, ${this.opacity})`;
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    // Glow effect
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = 'rgba(245, 200, 66, 0.8)';
+                }
+            }
+
+            for (let i = 0; i < particleCount; i++) {
+                particles.push(new Particle());
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+                requestAnimationFrame(animate);
+            }
+            animate();
+
+            // Hide loader after 5 seconds
+            setTimeout(() => {
+                loader.classList.add('hidden');
+                setTimeout(() => loader.remove(), 800);
+            }, 5000);
+
+            window.addEventListener('resize', () => {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            });
+        })();
+    </script>
+
     <!-- Matrix Effect -->
     <script>
         (function() {
@@ -575,20 +654,3 @@
                     ctx.fillText(text, x, y);
 
                     if (y > canvas.height && Math.random() > 0.975) {
-                        drops[i] = 0;
-                    }
-                    drops[i]++;
-                }
-            }
-
-            setInterval(draw, 33);
-
-            window.addEventListener('resize', function() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            });
-        })();
-    </script>
-
-</body>
-</html>
