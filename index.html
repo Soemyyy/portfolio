@@ -3,530 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Nouvian · SISR</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Crimson+Pro:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <title>Sarah Nouvian | Portfolio SISR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="cyber-grid"></div>
 
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-ring" id="cursorRing"></div>
-
-    <div class="grid-bg"></div>
-
-    <!-- ── NAV ─────────────────────────────────────── -->
     <nav>
-        <a href="#" class="nav-logo">SN_ <span style="opacity:0.4">v2026</span></a>
-        <ul class="nav-links">
-            <li><a href="#about">Profil</a></li>
-            <li><a href="#experience">Parcours</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#veille">Veille</a></li>
-            <li><a href="#contact" class="nav-cta">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="#" class="nav-logo">SARAH<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#experience">Parcours</a></li>
+                <li><a href="#skills">Compétences</a></li>
+                <li><a href="#veille">Veille</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <!-- ── HERO ─────────────────────────────────────── -->
-    <header>
-        <div class="hero-badge">BTS SIO · Option SISR · 2024–2026</div>
-
-        <div class="photo-wrap">
-            <img src="photo.jpg" alt="Sarah Nouvian" class="photo"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-            <div class="photo-placeholder" style="display:none;">SN</div>
-        </div>
-
+    <header id="hero">
+        <div class="photo-container"><img src="photo.jpg" alt="Sarah Nouvian" class="photo"></div>
         <h1>Sarah Nouvian</h1>
-        <p class="hero-title-line">Infrastructure & Sécurité des Systèmes</p>
-        <p class="hero-desc">
-            Étudiante en 2ème année de BTS SIO option SISR — j'apprends, je pratique, je progresse sur les réseaux et la cybersécurité.
-        </p>
-        <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Me contacter</a>
-            <a href="#projects" class="btn-outline">Voir mes projets</a>
-            <a href="cv.pdf" download class="btn-outline">📄 Télécharger mon CV</a>
-        </div>
-
-        <div class="hero-scroll">SCROLL</div>
+        <p style="letter-spacing: 5px; color: var(--gold); font-weight: 800; font-size: 0.8rem; text-transform: uppercase;">Systems & Networks student</p>
     </header>
 
-    <!-- ── MAIN ─────────────────────────────────────── -->
-    <main>
+    <main class="container">
+        <section id="experience" class="reveal">
+            <h2 class="section-title">Expériences Pro</h2>
+            <div class="glass-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3 style="color: var(--gold);">Fédération des Centres Sociaux (Nièvre)</h3>
+                    <span style="font-weight: 800; opacity: 0.5;">2025</span>
+                </div>
+                <p style="font-weight: 600; color: #fff; margin-bottom: 15px;">Stage - Administrateur Systèmes et Réseaux</p>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 12px;">▹ <strong>Infrastructure :</strong> Restructuration de baie de brassage (étiquetage & schématisation).</li>
+                    <li style="margin-bottom: 12px;">▹ <strong>SaaS / Cloud :</strong> Migration de données Google Workspace et gestion des droits.</li>
+                    <li>▹ <strong>Cybersécurité :</strong> Déploiement Bitwarden et activation de l'authentification MFA/2FA.</li>
+                </ul>
+            </div>
+        </section>
 
-        <!-- 01 — ABOUT -->
-        <section id="about" class="reveal">
-            <div class="section-label">01 — Profil</div>
-            <h2 class="section-title">À propos de moi</h2>
-            <div class="about-grid">
-                <div class="glass-card">
-                    <p class="about-text">
-                        En <strong>2ème année de BTS SIO option SISR</strong>, je me spécialise dans la sécurisation des infrastructures réseaux et l'administration système.
-                    </p>
+        <section id="skills" class="reveal">
+            <h2 class="section-title">Expertise</h2>
+            <div class="glass-card">
+                <div style="margin-bottom: 25px;">
+                    <span style="font-size: 0.7rem; font-weight: 800; letter-spacing: 2px;">CYBERSÉCURITÉ (MFA / BITWARDEN)</span>
+                    <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+                </div>
+                <div style="margin-bottom: 25px;">
+                    <span style="font-size: 0.7rem; font-weight: 800; letter-spacing: 2px;">INFRASTRUCTURE RÉSEAU (VLAN / BRASSAGE)</span>
+                    <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
                 </div>
                 <div>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-num">2+</span>
-                            <span class="stat-label">ans de formation</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">2</span>
-                            <span class="stat-label">stages en entreprise</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">5+</span>
-                            <span class="stat-label">projets réalisés</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-num">∞</span>
-                            <span class="stat-label">curiosité</span>
-                        </div>
-                    </div>
+                    <span style="font-size: 0.7rem; font-weight: 800; letter-spacing: 2px;">GOOGLE WORKSPACE ADMIN</span>
+                    <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- 02 — EXPERIENCE -->
-        <section id="experience" class="reveal">
-            <div class="section-label">02 — Parcours</div>
-            <h2 class="section-title">Expériences & Formation</h2>
-            <div class="experience-timeline">
-
-                <!-- STAGE 2 -->
-                <div class="exp-item">
-                    <div class="exp-card">
-                        <div class="exp-header">
-                            <div class="exp-org">Fédération des Centres Sociaux de la Nièvre</div>
-                            <span class="exp-date">Jan – Mars 2026</span>
-                        </div>
-                        <p class="exp-role">Stagiaire BTS SIO SISR · 2ème année · Nevers</p>
-                        <ul class="exp-tasks">
-                            <li>
-                                <span class="task-tag">Cloud</span>
-                                Refonte complète de l'arborescence Google Drive : analyse de l'existant, conception d'une structure claire et commune, organisation par année scolaire/civile avec gestion des archives.
-                            </li>
-                            <li>
-                                <span class="task-tag">Conduite du changement</span>
-                                Création de supports de communication (Canva) pour convaincre l'équipe d'adopter le Drive et abandonner le stockage local et les clés USB.
-                            </li>
-                            <li>
-                                <span class="task-tag">Matériel</span>
-                                Configuration d'ordinateurs et de tablettes : gestion des mots de passe, diagnostic des lenteurs (stockage, OS).
-                            </li>
-                            <li>
-                                <span class="task-tag">Web</span>
-                                Mise à jour et référencement du site internet de la fédération.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- STAGE 1 -->
-                <div class="exp-item">
-                    <div class="exp-card">
-                        <div class="exp-header">
-                            <div class="exp-org">Fédération des Centres Sociaux de la Nièvre</div>
-                            <span class="exp-date">Juin – Juil 2025</span>
-                        </div>
-                        <p class="exp-role">Stagiaire BTS SIO SISR · 1ère année · Nevers</p>
-                        <ul class="exp-tasks">
-                            <li>
-                                <span class="task-tag">Infra</span>
-                                Réorganisation et étiquetage complet de la baie de brassage, câblage structuré.
-                            </li>
-                            <li>
-                                <span class="task-tag">Cloud</span>
-                                Migration Google Workspace, gestion des droits utilisateurs et des groupes.
-                            </li>
-                            <li>
-                                <span class="task-tag">Sécu</span>
-                                Déploiement Bitwarden (gestionnaire de mots de passe), activation MFA/2FA sur l'ensemble des comptes.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- FORMATION -->
-                <div class="exp-item">
-                    <div class="exp-card">
-                        <div class="exp-header">
-                            <div class="exp-org">BTS SIO — Option SISR</div>
-                            <span class="exp-date">2024 – 2026</span>
-                        </div>
-                        <p class="exp-role">Formation initiale · Lycée Raoul Follereau · Nevers</p>
-                        <ul class="exp-tasks">
-                            <li>
-                                <span class="task-tag">Réseau</span>
-                                Architecture TCP/IP, VLANs, routage, protocoles sécurisés (SSH, TLS, IPSec).
-                            </li>
-                            <li>
-                                <span class="task-tag">Système</span>
-                                Administration Linux/Windows Server, virtualisation (Proxmox, VMware).
-                            </li>
-                            <li>
-                                <span class="task-tag">Cyber</span>
-                                Sécurisation des systèmes, gestion des identités, analyse de vulnérabilités.
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 03 — SKILLS -->
-        <section id="skills" class="reveal">
-            <div class="section-label">03 — Compétences</div>
-            <h2 class="section-title">Stack technique</h2>
-
-            <div style="margin-bottom: 12px; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.1em;">CYBERSÉCURITÉ</div>
-            <div class="skills-grid" style="margin-bottom: 30px;">
-                <div class="skill-card">
-                    <div class="skill-icon">🔐</div>
-                    <div class="skill-info">
-                        <div class="skill-name">MFA / 2FA</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔑</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Bitwarden / Gestion secrets</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔍</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Analyse vulnérabilités</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot empty"></div><div class="dot empty"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-bottom: 12px; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.1em;">INFRASTRUCTURE & SYSTÈMES</div>
-            <div class="skills-grid" style="margin-bottom: 30px;">
-                <div class="skill-card">
-                    <div class="skill-icon">🐧</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Linux (Debian/Ubuntu)</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot empty"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🪟</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Windows Server</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot empty"></div><div class="dot empty"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <div class="skill-info">
-                        <div class="skill-name">TCP/IP, VLANs, Routage</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot empty"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">☁️</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Google Workspace</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-bottom: 12px; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--text-dim); letter-spacing: 0.1em;">OUTILS & AUTRES</div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🐙</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Git / GitHub</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot empty"></div><div class="dot empty"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">📋</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Documentation technique</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot empty"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <div class="skill-info">
-                        <div class="skill-name">Wireshark</div>
-                        <div class="skill-level">
-                            <div class="dot filled"></div><div class="dot filled"></div><div class="dot filled"></div><div class="dot empty"></div><div class="dot empty"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 03b — CERTIFICATIONS -->
-        <section class="reveal">
-            <div class="section-label">03b — Formations</div>
-            <h2 class="section-title">Certifications & Cours</h2>
-            <div class="certs-grid">
-                <div class="cert-card">
-                    <div class="cert-icon">🏫</div>
-                    <div>
-                        <div class="cert-title">BTS SIO — Option SISR</div>
-                        <div class="cert-sub">Lycée Raoul Follereau · Nevers · 2024–2026</div>
-                        <span class="cert-badge">En cours</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 04 — PROJETS -->
-        <section id="projects" class="reveal">
-            <div class="section-label">04 — Projets</div>
-            <h2 class="section-title">Réalisations</h2>
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-num">Projet 01</div>
-                    <div class="project-title">Migration Google Workspace</div>
-                    <p class="project-desc">
-                        Migration complète de la messagerie et des outils collaboratifs des Centres Sociaux de la Nièvre vers Google Workspace. Gestion des droits, création des comptes, transfert des données.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Google Workspace</span>
-                        <span class="tag">Cloud</span>
-                        <span class="tag">IAM</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-num">Projet 02</div>
-                    <div class="project-title">Déploiement Bitwarden + MFA</div>
-                    <p class="project-desc">
-                        Mise en place d'un gestionnaire de mots de passe Bitwarden pour l'ensemble de la structure, accompagné de l'activation du MFA/2FA sur tous les comptes sensibles.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Bitwarden</span>
-                        <span class="tag">Sécurité</span>
-                        <span class="tag">MFA</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-num">Projet 03</div>
-                    <div class="project-title">Refonte baie de brassage</div>
-                    <p class="project-desc">
-                        Réorganisation complète et étiquetage de la baie de brassage pour faciliter la maintenance et améliorer la lisibilité de l'infrastructure physique.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Réseau</span>
-                        <span class="tag">Infrastructure</span>
-                        <span class="tag">Documentation</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-num">Projet 04</div>
-                    <div class="project-title">Réorganisation arborescence Google Drive</div>
-                    <p class="project-desc">
-                        Audit et refonte complète du Drive de la Fédération (71 Go). Conception d'une arborescence accessible en 4–5 clics, système d'archives annuelles, et supports de communication pour accompagner l'adoption par toute l'équipe.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Google Drive</span>
-                        <span class="tag">Conduite du changement</span>
-                        <span class="tag">Canva</span>
-                        <span class="tag">Organisation</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-num">Projet 05</div>
-                    <div class="project-title">TP GLPI — Gestion de parc informatique</div>
-                    <p class="project-desc">
-                        Installation d'un serveur GLPI sur Ubuntu (Apache, PHP, MariaDB), configuration de la gestion du parc, déploiement de l'agent sur des postes Windows 10 via GPO et gestion des tickets d'incident.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">GLPI</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Windows Server</span>
-                        <span class="tag">GPO</span>
-                        <span class="tag">Active Directory</span>
-                    </div>
-                    <a href="tp-glpi.pdf" target="_blank" class="project-link">Voir le TP →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-num">Projet 06</div>
-                    <div class="project-title">TP Nagios — Supervision réseau</div>
-                    <p class="project-desc">
-                        Déploiement d'un serveur de supervision Nagios sur Ubuntu, configuration de l'agent NRPE sur une machine cible et supervision de services en temps réel : charge CPU, espace disque, processus et SSH.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tag">Nagios</span>
-                        <span class="tag">NRPE</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Supervision</span>
-                    </div>
-                    <a href="tp-nagios.pdf" target="_blank" class="project-link">Voir le TP →</a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- 05 — VEILLE -->
         <section id="veille" class="reveal">
-            <div class="section-label">05 — Veille technologique</div>
-            <h2 class="section-title">Ma veille</h2>
-            <div class="veille-card">
-                <div class="veille-header">
-                    <div class="veille-icon-wrap">🔐</div>
-                    <div>
-                        <div class="veille-title">L'authentification multifacteur (MFA) et son importance en cybersécurité</div>
-                        <div class="veille-subtitle">Comprendre ce qu'est la MFA, pourquoi elle est essentielle et quelles sont les méthodes et tendances actuelles</div>
-                    </div>
-                </div>
-                <div class="veille-body">
-                    <p>
-                        Avec l'augmentation des cyberattaques — phishing, vols de mots de passe, piratages de comptes — les entreprises comme les particuliers doivent renforcer leur sécurité. La MFA est aujourd'hui l'une des solutions les plus simples et les plus efficaces pour protéger les accès : <strong>80 % des piratages de comptes sont liés à un mot de passe faible ou volé</strong>. Même un bon mot de passe peut être compromis par hameçonnage — la MFA réduit considérablement ce risque.
-                    </p>
-                    <p>
-                        J'ai identifié plusieurs méthodes utilisées aujourd'hui : le <strong>code SMS</strong> (le plus courant, mais vulnérable au SIM swapping), l'<strong>application d'authentification</strong> comme Google Authenticator (plus sécurisée, fonctionne sans connexion), la <strong>notification push</strong>, la <strong>clé physique FIDO2/U2F</strong> recommandée pour les administrateurs, et la <strong>biométrie</strong> (empreinte, reconnaissance faciale).
-                    </p>
-                    <p>
-                        En entreprise, la MFA protège les accès aux outils internes, comptes administrateurs, applications cloud (Microsoft 365, Google Workspace) et VPN. La tendance actuelle va vers le modèle <strong>Zero Trust</strong> et la <strong>passwordless authentication</strong> — connexion sans mot de passe, uniquement via biométrie ou clé FIDO2. Même si la MFA reste efficace, elle a des limites : certains utilisateurs la trouvent contraignante, le SMS n'est pas totalement sécurisé, et des attaques avancées comme le <strong>MFA fatigue</strong> peuvent la contourner.
-                    </p>
-                </div>
-                <div class="veille-sources">
-                    <h4>Sources consultées</h4>
-                    <div class="source-list">
-                        <span class="source-chip">CNIL.fr</span>
-                        <span class="source-chip">Cert-FR</span>
-                        <span class="source-chip">ANSSI</span>
-                        <span class="source-chip">Cybermalveillance.gouv.fr</span>
-                        <span class="source-chip">ZDNet</span>
-                        <span class="source-chip">JournalDuNet</span>
-                        <span class="source-chip">LeBigData.fr</span>
-                    </div>
-                </div>
+            <h2 class="section-title">Veille</h2>
+            <div class="glass-card">
+                <h3 style="margin-bottom: 15px;">L'Authentification Multifacteur (MFA)</h3>
+                <p>Suivi des vulnérabilités liées aux identités numériques et étude des protocoles FIDO2 pour éliminer les risques de phishing.</p>
             </div>
         </section>
-
-        <!-- 06 — CONTACT -->
-        <section id="contact" class="reveal">
-        <!-- 06 — CONTACT -->
-        <section id="contact" class="reveal">
-            <div class="contact-section">
-                <div class="section-label" style="justify-content:center; margin-bottom: 20px;">06 — Contact</div>
-                <h2 class="contact-title">Travaillons ensemble</h2>
-                <p class="contact-sub">
-                    Disponible pour des projets, une alternance ou simplement pour échanger sur la cybersécurité et les systèmes.
-                </p>
-                <div class="contact-links">
-                    <a href="/cdn-cgi/l/email-protection#2b584a594a4345445e5d424a456b4c464a424705484446" class="contact-link email">
-                        ✉️ <span class="__cf_email__" data-cfemail="b0c3d1c2d1d8dedfc5c6d9d1def0d7ddd1d9dc9ed3dfdd">[email&#160;protected]</span>
-                    </a>
-                    <a href="cv.pdf" download class="contact-link ghost">
-                        📄 Télécharger mon CV
-                    </a>
-                    <a href="https://github.com/soemyyy" target="_blank" class="contact-link ghost">
-                        🐙 GitHub
-                    </a>
-                    <a href="#" id="openModal" class="contact-link ghost">
-                        📋 Mentions légales
-                    </a>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- ── FOOTER ────────────────────────────────────── -->
-    <footer>
-        <p>© 2026 Sarah Nouvian · Portfolio BTS SIO SISR · Construit avec ❤️ et trop de café</p>
+    <footer style="padding: 100px 0 50px; text-align: center; border-top: 1px solid var(--border);">
+        <a href="mailto:sarahnouvian@gmail.com" style="color: #fff; text-decoration: none; font-weight: 600;">sarahnouvian@gmail.com</a>
+        <br><br>
+        <a href="#" id="openModal" style="color: var(--gold); text-decoration: none; font-size: 0.8rem; opacity: 0.6;">Mentions Légales</a>
     </footer>
 
-    <!-- ── MODALE ────────────────────────────────────── -->
     <div id="legalModal" class="modal">
         <div class="modal-content">
-            <button id="closeModal" class="modal-close">×</button>
-            <h2 style="color: var(--gold); margin-bottom: 16px; font-size: 1.3rem;">Mentions Légales</h2>
-            <p style="color: var(--text-muted); line-height: 1.8; font-size: 0.9rem;">
-                Ce portfolio est réalisé à des fins pédagogiques dans le cadre du BTS SIO option SISR.<br><br>
-                <strong style="color:var(--text)">Hébergement :</strong> GitHub Pages<br>
-                <strong style="color:var(--text)">Propriétaire :</strong> Sarah Nouvian<br>
-                <strong style="color:var(--text)">Cookies :</strong> Aucun cookie utilisé<br>
-                <strong style="color:var(--text)">Données personnelles :</strong> Aucune collecte
-            </p>
+            <span id="closeModal" style="position: absolute; top: 15px; right: 20px; cursor: pointer; color: var(--gold); font-size: 1.5rem;">&times;</span>
+            <h2 style="color: var(--gold); margin-bottom: 15px;">Mentions Légales</h2>
+            <p style="font-size: 0.9rem; line-height: 1.6;">Éditeur : Sarah Nouvian. Hébergement : GitHub Pages. Site réalisé à des fins pédagogiques.</p>
         </div>
     </div>
 
-    <!-- ── BOUTON RETOUR EN HAUT ──────────────────────── -->
-    <button id="backToTop" aria-label="Retour en haut">↑</button>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
-
-    <!-- Curseur inline -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var cursor = document.getElementById('cursor');
-            var ring = document.getElementById('cursorRing');
-            if (!cursor || !ring) return;
-
-            var mx = -200, my = -200, rx = -200, ry = -200;
-            cursor.style.opacity = '0';
-            ring.style.opacity = '0';
-
-            document.addEventListener('mousemove', function(e) {
-                mx = e.clientX;
-                my = e.clientY;
-                cursor.style.left = (mx - 5) + 'px';
-                cursor.style.top  = (my - 5) + 'px';
-                cursor.style.opacity = '1';
-                ring.style.opacity = '0.7';
-            });
-
-            (function animRing() {
-                rx += (mx - rx) * 0.15;
-                ry += (my - ry) * 0.15;
-                ring.style.left = (rx - 18) + 'px';
-                ring.style.top  = (ry - 18) + 'px';
-                requestAnimationFrame(animRing);
-            })();
-
-            document.querySelectorAll('a, button').forEach(function(el) {
-                el.addEventListener('mouseenter', function() {
-                    cursor.style.transform = 'scale(2)';
-                    ring.style.transform = 'scale(1.5)';
-                    ring.style.opacity = '1';
-                });
-                el.addEventListener('mouseleave', function() {
-                    cursor.style.transform = 'scale(1)';
-                    ring.style.transform = 'scale(1)';
-                    ring.style.opacity = '0.7';
-                });
-            });
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
