@@ -332,12 +332,13 @@ section { margin-bottom: 120px; }
     gap: 20px;
 }
 .glass-card {
-    background: var(--glass);
+    background: rgba(11, 15, 30, 0.95);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 36px;
     backdrop-filter: blur(20px);
     transition: border-color 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 .glass-card:hover { border-color: var(--border-strong); }
 .about-text { font-size: 0.97rem; line-height: 1.9; color: var(--text-muted); }
@@ -390,11 +391,12 @@ section { margin-bottom: 120px; }
     box-shadow: 0 0 14px var(--gold-glow);
 }
 .exp-card {
-    background: var(--glass);
+    background: rgba(11, 15, 30, 0.95);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 30px;
     transition: border-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 .exp-card:hover {
     border-color: var(--border-strong);
@@ -414,12 +416,12 @@ section { margin-bottom: 120px; }
     border-radius: 100px;
     padding: 4px 14px;
 }
-.exp-role { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; margin-bottom: 18px; }
+.exp-role { font-size: 0.85rem; color: #8a9ab8; font-weight: 600; margin-bottom: 18px; }
 .exp-tasks { list-style: none; }
 .exp-tasks li {
     padding: 8px 0;
     font-size: 0.88rem;
-    color: var(--text-muted);
+    color: #b8c5db;
     border-bottom: 1px solid rgba(255,255,255,0.04);
     display: flex; gap: 12px; align-items: flex-start;
 }
@@ -445,12 +447,13 @@ section { margin-bottom: 120px; }
     gap: 16px;
 }
 .skill-card {
-    background: var(--glass);
+    background: rgba(11, 15, 30, 0.95);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: 22px 24px;
     transition: all 0.3s;
     display: flex; align-items: center; gap: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 .skill-card:hover {
     border-color: var(--border-strong);
@@ -516,13 +519,14 @@ section { margin-bottom: 120px; }
     gap: 20px;
 }
 .project-card {
-    background: var(--glass);
+    background: rgba(11, 15, 30, 0.95);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 28px;
     transition: all 0.35s cubic-bezier(0.17, 0.67, 0.83, 0.67);
     position: relative;
     overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 .project-card::before {
     content: "";
@@ -799,11 +803,12 @@ footer {
 }
 
 .epreuve-card {
-    background: var(--glass);
+    background: rgba(11, 15, 30, 0.95);
     border: 1px solid var(--border);
     border-radius: 20px;
     padding: 30px;
     transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .epreuve-card:hover {
