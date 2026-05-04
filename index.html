@@ -13,6 +13,7 @@
     <div class="cursor" id="cursor"></div>
     <div class="cursor-ring" id="cursorRing"></div>
     <div class="bg-grain"></div>
+    <div id="readProgress"></div>
 
     <!-- NAV -->
     <nav id="mainNav">
@@ -38,6 +39,7 @@
     </nav>
 
     <div class="mobile-menu" id="mobileMenu">
+        <button class="mm-close" id="mmClose">×</button>
         <ul>
             <li><a href="#about" class="mm-link">Profil</a></li>
             <li><a href="#bts" class="mm-link">BTS SISR</a></li>
@@ -51,7 +53,7 @@
 
     <!-- HERO -->
     <header id="hero">
-        <div class="hero-left">
+        <div class="hero-left reveal-hero">
             <div class="hero-eyebrow">
                 <span class="eyebrow-line"></span>
                 <span class="eyebrow-text">BTS SIO · Option SISR · 2024–2026</span>
@@ -61,14 +63,14 @@
                 <span class="name-last">Nouvian</span>
             </h1>
             <p class="hero-subtitle">Infrastructure &amp; Sécurité<br>des Systèmes d'Information</p>
-            <p class="hero-desc">Étudiante en 2ème année de BTS SIO option SISR au lycée Raoul Follereau de Nevers — passionnée par les réseaux, la cybersécurité et l'administration système.</p>
+            <p class="hero-desc">Étudiante en 2ème année de BTS SIO option SISR au lycée Raoul Follereau de Nevers — spécialisée en administration système, réseaux et cybersécurité.</p>
             <div class="hero-actions">
                 <a href="mailto:sarahnouvian@gmail.com" class="btn-primary">
                     <span>Me contacter</span>
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </a>
-                <a href="cv.pdf" download class="btn-ghost">📄 CV</a>
-                <a href="https://github.com/soemyyy" target="_blank" class="btn-ghost">🐙 GitHub</a>
+                <a href="cv.pdf" download class="btn-ghost">Télécharger mon CV</a>
+                <a href="https://github.com/soemyyy" target="_blank" class="btn-ghost">GitHub</a>
             </div>
             <div class="hero-stats">
                 <div class="hstat"><span class="hstat-n">2</span><span class="hstat-l">stages</span></div>
@@ -78,21 +80,18 @@
                 <div class="hstat"><span class="hstat-n">6+</span><span class="hstat-l">projets</span></div>
             </div>
         </div>
-        <div class="hero-right">
+
+        <div class="hero-right reveal-hero-img">
             <div class="photo-frame">
                 <div class="photo-deco-1"></div>
-                <div class="photo-deco-2"></div>
                 <div class="photo-inner">
                     <img src="photo.jpg" alt="Sarah Nouvian" class="hero-photo"
                          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
                     <div class="photo-placeholder">SN</div>
                 </div>
-                <div class="photo-badge">
-                    <span class="pb-icon">🔐</span>
-                    <span class="pb-text">Cybersécurité &amp; Réseaux</span>
-                </div>
             </div>
         </div>
+
         <div class="hero-scroll-indicator">
             <span>Défiler</span>
             <div class="scroll-line"></div>
@@ -102,53 +101,54 @@
     <main>
 
         <!-- 01 ABOUT -->
-        <section id="about" class="section reveal">
-            <div class="section-bg-num">01</div>
+        <section id="about" class="section">
+            <div class="section-bg-num reveal-bg">01</div>
             <div class="section-header">
-                <div class="section-label">
+                <div class="section-label reveal-label">
                     <span class="label-num">01</span>
                     <span class="label-line"></span>
                     <span class="label-text">Profil</span>
                 </div>
-                <h2 class="section-title">À propos<br><em>de moi</em></h2>
+                <h2 class="section-title reveal-title">À propos<br><em>de moi</em></h2>
             </div>
             <div class="about-layout">
-                <div class="about-text-block">
+                <div class="about-text-block reveal-left">
                     <p class="about-lead">En <strong>2ème année de BTS SIO option SISR</strong>, je me spécialise dans la sécurisation des infrastructures réseaux et l'administration système.</p>
-                    <p class="about-body">Passionnée par le numérique depuis le lycée, j'ai choisi le BTS SIO pour transformer cette passion en compétences professionnelles concrètes. Mes deux stages à la Fédération des Centres Sociaux de la Nièvre m'ont permis de travailler sur des projets réels — de la refonte d'un Drive à la mise en place de la sécurité numérique d'une organisation.</p>
+                    <p class="about-body">Mes deux stages à la Fédération des Centres Sociaux de la Nièvre m'ont permis de travailler sur des projets concrets — de la refonte complète d'un système documentaire à la mise en place de la sécurité numérique d'une organisation associative.</p>
                     <p class="about-body">Je suis à l'aise aussi bien en autonomie que dans le travail d'équipe, et j'aime particulièrement la dimension humaine de l'informatique : expliquer, accompagner, convaincre.</p>
                 </div>
-                <div class="about-cards">
-                    <div class="about-stat-card"><span class="asc-num">2+</span><span class="asc-label">ans de formation</span></div>
-                    <div class="about-stat-card gold"><span class="asc-num">2</span><span class="asc-label">stages en entreprise</span></div>
-                    <div class="about-stat-card"><span class="asc-num">6+</span><span class="asc-label">projets réalisés</span></div>
-                    <div class="about-stat-card dark"><span class="asc-num">∞</span><span class="asc-label">curiosité</span></div>
+                <div class="about-cards reveal-right">
+                    <div class="about-stat-card sc-anim"><span class="asc-num">2+</span><span class="asc-label">ans de formation</span></div>
+                    <div class="about-stat-card gold sc-anim"><span class="asc-num">2</span><span class="asc-label">stages en entreprise</span></div>
+                    <div class="about-stat-card sc-anim"><span class="asc-num">6+</span><span class="asc-label">projets réalisés</span></div>
+                    <div class="about-stat-card dark sc-anim"><span class="asc-num">∞</span><span class="asc-label">curiosité</span></div>
                 </div>
             </div>
         </section>
 
         <!-- 02 BTS -->
-        <section id="bts" class="section reveal">
-            <div class="section-bg-num">02</div>
+        <section id="bts" class="section">
+            <div class="section-bg-num reveal-bg">02</div>
             <div class="section-header">
-                <div class="section-label">
+                <div class="section-label reveal-label">
                     <span class="label-num">02</span>
                     <span class="label-line"></span>
                     <span class="label-text">Formation</span>
                 </div>
-                <h2 class="section-title">Le BTS SIO<br><em>option SISR</em></h2>
+                <h2 class="section-title reveal-title">Le BTS SIO<br><em>option SISR</em></h2>
             </div>
-            <div class="bts-intro">
+            <div class="bts-intro reveal-up">
                 <p>Le BTS <strong>Services Informatiques aux Organisations</strong> option <strong class="gold-text">Solutions d'Infrastructure, Systèmes et Réseaux</strong> forme des techniciens capables d'installer, d'administrer et de sécuriser les infrastructures informatiques des organisations.</p>
             </div>
-            <h3 class="subsection-title">Les épreuves professionnelles</h3>
+            <h3 class="subsection-title reveal-up">Les épreuves professionnelles</h3>
             <div class="epreuves-layout">
-                <div class="epreuve-big">
+                <!-- E5 grande carte -->
+                <div class="epreuve-big reveal-left">
                     <div class="ep-accent-line"></div>
                     <div class="ep-header">
                         <div class="ep-num-big">E5</div>
                         <div class="ep-meta">
-                            <span class="ep-type oral">Oral</span>
+                            <span class="ep-type">Oral</span>
                             <span class="ep-dur">40 minutes</span>
                         </div>
                     </div>
@@ -156,31 +156,32 @@
                     <p class="ep-desc">Épreuve orale de 40 minutes portant sur l'administration système et réseau. Le candidat défend ses choix techniques, explique son travail en stage et répond aux questions du jury sur les aspects infrastructure et sécurité.</p>
                     <div class="ep-keywords"><span>Infrastructure</span><span>Administration</span><span>Défense orale</span></div>
                 </div>
+
                 <div class="epreuves-col">
-                    <div class="epreuve-small">
-                        <div class="ep-accent-line green-line"></div>
+                    <div class="epreuve-small reveal-right" style="transition-delay:0.1s">
+                        <div class="ep-accent-line"></div>
                         <div class="ep-header">
-                            <div class="ep-num-sm green-num">E6</div>
+                            <div class="ep-num-sm">E6</div>
                             <div class="ep-meta">
-                                <span class="ep-type pratique">Pratique</span>
+                                <span class="ep-type">Pratique</span>
                                 <span class="ep-dur">2h10</span>
                             </div>
                         </div>
                         <h4 class="ep-title">Support et mise à disposition de services informatiques</h4>
-                        <p class="ep-desc">Épreuve pratique où le candidat résout des incidents, répond à des demandes d'assistance et met en place des services informatiques. Évaluation de la capacité à gérer le support technique et à documenter les interventions.</p>
+                        <p class="ep-desc">Épreuve pratique où le candidat résout des incidents, répond à des demandes d'assistance et met en place des services informatiques.</p>
                         <div class="ep-keywords"><span>Support</span><span>Incidents</span><span>Documentation</span></div>
                     </div>
-                    <div class="epreuve-small">
-                        <div class="ep-accent-line dark-line"></div>
+                    <div class="epreuve-small reveal-right" style="transition-delay:0.2s">
+                        <div class="ep-accent-line"></div>
                         <div class="ep-header">
-                            <div class="ep-num-sm dark-num">E7</div>
+                            <div class="ep-num-sm">E7</div>
                             <div class="ep-meta">
-                                <span class="ep-type ecrit">Écrit</span>
+                                <span class="ep-type">Écrit</span>
                                 <span class="ep-dur">4h</span>
                             </div>
                         </div>
                         <h4 class="ep-title">Cybersécurité des services informatiques</h4>
-                        <p class="ep-desc">Épreuve écrite dédiée à la sécurité : analyse de vulnérabilités, mise en place de mesures de protection, gestion des incidents de sécurité. Le candidat démontre sa maîtrise des bonnes pratiques.</p>
+                        <p class="ep-desc">Épreuve écrite dédiée à la sécurité : analyse de vulnérabilités, mise en place de mesures de protection, gestion des incidents de sécurité.</p>
                         <div class="ep-keywords"><span>Cybersécurité</span><span>Vulnérabilités</span><span>Protection</span></div>
                     </div>
                 </div>
@@ -188,19 +189,20 @@
         </section>
 
         <!-- 03 EXPERIENCE -->
-        <section id="experience" class="section reveal">
-            <div class="section-bg-num">03</div>
+        <section id="experience" class="section">
+            <div class="section-bg-num reveal-bg">03</div>
             <div class="section-header">
-                <div class="section-label">
+                <div class="section-label reveal-label">
                     <span class="label-num">03</span>
                     <span class="label-line"></span>
                     <span class="label-text">Parcours</span>
                 </div>
-                <h2 class="section-title">Expériences<br><em>professionnelles</em></h2>
+                <h2 class="section-title reveal-title">Expériences<br><em>professionnelles</em></h2>
             </div>
             <div class="timeline">
 
-                <div class="tl-item">
+                <!-- STAGE 2 -->
+                <div class="tl-item reveal-up">
                     <div class="tl-marker">
                         <div class="tl-dot"></div>
                         <div class="tl-line"></div>
@@ -234,16 +236,23 @@
                         </div>
                         <div class="tl-docs">
                             <a href="Attestation_de_stage_SIO2026__2__pdf.pdf" target="_blank" class="doc-btn">
-                                <span class="doc-icon">📄</span><span>Attestation de stage 2026</span><span class="doc-arrow">↗</span>
+                                Attestation de stage 2026 <span class="doc-arrow">↗</span>
                             </a>
                             <a href="rapport_stage_sarah_final.pdf" target="_blank" class="doc-btn">
-                                <span class="doc-icon">📋</span><span>Rapport de stage 2026</span><span class="doc-arrow">↗</span>
+                                Aperçu rapport 2026 <span class="doc-arrow">↗</span>
+                            </a>
+                            <a href="rapport_stage_sarah_final.pdf" download class="doc-btn doc-dl">
+                                Télécharger rapport 2026 <span class="doc-arrow">↓</span>
+                            </a>
+                            <a href="tableau_synthese_e5.pdf" target="_blank" class="doc-btn">
+                                Tableau de synthèse E5 <span class="doc-arrow">↗</span>
                             </a>
                         </div>
                     </div>
                 </div>
 
-                <div class="tl-item">
+                <!-- STAGE 1 -->
+                <div class="tl-item reveal-up" style="transition-delay:0.15s">
                     <div class="tl-marker">
                         <div class="tl-dot secondary-dot"></div>
                     </div>
@@ -263,7 +272,7 @@
                             </div>
                             <div class="mission-item">
                                 <span class="mission-tag cloud">Cloud</span>
-                                <p>Migration Google Workspace : création des comptes, gestion des droits utilisateurs et des groupes, transfert des données.</p>
+                                <p>Migration Google Workspace : création des comptes, gestion des droits utilisateurs et des groupes, transfert des données depuis KDrive.</p>
                             </div>
                             <div class="mission-item">
                                 <span class="mission-tag secu">Sécurité</span>
@@ -272,11 +281,14 @@
                         </div>
                         <div class="tl-docs">
                             <a href="SARAH_attestationdestageSIO__2__pdf.pdf" target="_blank" class="doc-btn">
-                                <span class="doc-icon">📄</span><span>Attestation de stage 2025</span><span class="doc-arrow">↗</span>
+                                Attestation de stage 2025 <span class="doc-arrow">↗</span>
                             </a>
-                            <span class="doc-btn placeholder">
-                                <span class="doc-icon">📋</span><span>Rapport de stage — à venir</span>
-                            </span>
+                            <a href="rapport_stage_1ere_annee.pdf" target="_blank" class="doc-btn">
+                                Aperçu rapport 2025 <span class="doc-arrow">↗</span>
+                            </a>
+                            <a href="rapport_stage_1ere_annee.pdf" download class="doc-btn doc-dl">
+                                Télécharger rapport 2025 <span class="doc-arrow">↓</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -285,62 +297,71 @@
         </section>
 
         <!-- 04 SKILLS -->
-        <section id="skills" class="section reveal">
-            <div class="section-bg-num">04</div>
+        <section id="skills" class="section">
+            <div class="section-bg-num reveal-bg">04</div>
             <div class="section-header">
-                <div class="section-label">
+                <div class="section-label reveal-label">
                     <span class="label-num">04</span>
                     <span class="label-line"></span>
                     <span class="label-text">Compétences</span>
                 </div>
-                <h2 class="section-title">Stack<br><em>technique</em></h2>
+                <h2 class="section-title reveal-title">Stack<br><em>technique</em></h2>
             </div>
             <div class="skills-universe">
-                <div class="skill-domain">
-                    <div class="sd-header"><span class="sd-icon">🔐</span><h3 class="sd-title">Cybersécurité</h3></div>
+                <div class="skill-domain reveal-up">
+                    <div class="sd-header">
+                        <div class="sd-icon-box">🔐</div>
+                        <h3 class="sd-title">Cybersécurité</h3>
+                    </div>
                     <div class="sd-skills">
-                        <div class="skill-pill"><span class="sp-name">MFA / 2FA</span><div class="sp-bar"><div class="sp-fill" style="width:100%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Bitwarden</span><div class="sp-bar"><div class="sp-fill" style="width:100%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Audit sécurité</span><div class="sp-bar"><div class="sp-fill" style="width:60%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Analyse vulnérabilités</span><div class="sp-bar"><div class="sp-fill" style="width:60%"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">MFA / 2FA</span><div class="sp-bar"><div class="sp-fill" data-width="100"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">Bitwarden</span><div class="sp-bar"><div class="sp-fill" data-width="100"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">Audit sécurité</span><div class="sp-bar"><div class="sp-fill" data-width="60"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">Analyse vulnérabilités</span><div class="sp-bar"><div class="sp-fill" data-width="60"></div></div></div>
                     </div>
                 </div>
-                <div class="skill-domain featured">
-                    <div class="sd-header"><span class="sd-icon">🌐</span><h3 class="sd-title">Réseaux &amp; Infra</h3></div>
+                <div class="skill-domain featured reveal-up" style="transition-delay:0.1s">
+                    <div class="sd-header">
+                        <div class="sd-icon-box light">🌐</div>
+                        <h3 class="sd-title light-title">Réseaux &amp; Infra</h3>
+                    </div>
                     <div class="sd-skills">
-                        <div class="skill-pill"><span class="sp-name">TCP/IP · VLANs · Routage</span><div class="sp-bar"><div class="sp-fill" style="width:80%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Linux (Debian / Ubuntu)</span><div class="sp-bar"><div class="sp-fill" style="width:80%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Windows Server</span><div class="sp-bar"><div class="sp-fill" style="width:60%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Active Directory / GPO</span><div class="sp-bar"><div class="sp-fill" style="width:60%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Câblage / Baie brassage</span><div class="sp-bar"><div class="sp-fill" style="width:80%"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name light-name">TCP/IP · VLANs · Routage</span><div class="sp-bar dark-bar"><div class="sp-fill gold-fill" data-width="80"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name light-name">Linux (Debian / Ubuntu)</span><div class="sp-bar dark-bar"><div class="sp-fill gold-fill" data-width="80"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name light-name">Windows Server</span><div class="sp-bar dark-bar"><div class="sp-fill gold-fill" data-width="60"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name light-name">Active Directory / GPO</span><div class="sp-bar dark-bar"><div class="sp-fill gold-fill" data-width="60"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name light-name">Câblage / Baie brassage</span><div class="sp-bar dark-bar"><div class="sp-fill gold-fill" data-width="80"></div></div></div>
                     </div>
                 </div>
-                <div class="skill-domain">
-                    <div class="sd-header"><span class="sd-icon">☁️</span><h3 class="sd-title">Cloud &amp; Outils</h3></div>
+                <div class="skill-domain reveal-up" style="transition-delay:0.2s">
+                    <div class="sd-header">
+                        <div class="sd-icon-box">☁️</div>
+                        <h3 class="sd-title">Cloud &amp; Outils</h3>
+                    </div>
                     <div class="sd-skills">
-                        <div class="skill-pill"><span class="sp-name">Google Workspace</span><div class="sp-bar"><div class="sp-fill" style="width:100%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">GLPI</span><div class="sp-bar"><div class="sp-fill" style="width:80%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Nagios</span><div class="sp-bar"><div class="sp-fill" style="width:60%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Wireshark</span><div class="sp-bar"><div class="sp-fill" style="width:60%"></div></div></div>
-                        <div class="skill-pill"><span class="sp-name">Git / GitHub</span><div class="sp-bar"><div class="sp-fill" style="width:60%"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">Google Workspace</span><div class="sp-bar"><div class="sp-fill" data-width="100"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">GLPI</span><div class="sp-bar"><div class="sp-fill" data-width="80"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">Nagios</span><div class="sp-bar"><div class="sp-fill" data-width="60"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">Wireshark</span><div class="sp-bar"><div class="sp-fill" data-width="60"></div></div></div>
+                        <div class="skill-pill"><span class="sp-name">Git / GitHub</span><div class="sp-bar"><div class="sp-fill" data-width="60"></div></div></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- 04b CERTIFICATIONS -->
-        <section class="section reveal">
-            <div class="section-bg-num">04b</div>
+        <section class="section">
+            <div class="section-bg-num reveal-bg">04b</div>
             <div class="section-header">
-                <div class="section-label">
+                <div class="section-label reveal-label">
                     <span class="label-num">04b</span>
                     <span class="label-line"></span>
                     <span class="label-text">Certifications</span>
                 </div>
-                <h2 class="section-title">Formations &amp;<br><em>certifications</em></h2>
+                <h2 class="section-title reveal-title">Formations &amp;<br><em>certifications</em></h2>
             </div>
             <div class="certs-layout">
-                <div class="cert-main">
+                <div class="cert-main reveal-left">
                     <div class="cert-stripe"></div>
                     <div class="cert-inner">
                         <span class="cert-emoji">🏫</span>
@@ -352,7 +373,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="pix-cards">
+                <div class="pix-cards reveal-right">
                     <div class="pix-card">
                         <div class="pix-card-header">
                             <div class="pix-hexagon">
@@ -366,8 +387,8 @@
                             </div>
                         </div>
                         <div class="pix-card-meta">
-                            <span>📅 20 janvier 2026</span>
-                            <span>🏫 Lycée Raoul Follereau, Nevers</span>
+                            <span>20 janvier 2026</span>
+                            <span>Lycée Raoul Follereau, Nevers</span>
                             <span class="pix-code">Code : P-8BRTWH3H</span>
                         </div>
                         <div class="pix-competences">
@@ -389,8 +410,8 @@
                             </div>
                         </div>
                         <div class="pix-card-meta">
-                            <span>📅 5 février 2024</span>
-                            <span>🏫 Lycée Alain Colas, Nevers</span>
+                            <span>5 février 2024</span>
+                            <span>Lycée Alain Colas, Nevers</span>
                             <span class="pix-code">Code : P-4HP8QKT6</span>
                         </div>
                         <div class="pix-competences">
@@ -404,26 +425,26 @@
         </section>
 
         <!-- 05 PROJETS -->
-        <section id="projects" class="section reveal">
-            <div class="section-bg-num">05</div>
+        <section id="projects" class="section">
+            <div class="section-bg-num reveal-bg">05</div>
             <div class="section-header">
-                <div class="section-label">
+                <div class="section-label reveal-label">
                     <span class="label-num">05</span>
                     <span class="label-line"></span>
                     <span class="label-text">Projets</span>
                 </div>
-                <h2 class="section-title">Réalisations<br><em>&amp; projets</em></h2>
+                <h2 class="section-title reveal-title">Réalisations<br><em>&amp; projets</em></h2>
             </div>
             <div class="projects-mosaic">
-                <div class="proj-card featured-proj">
+                <div class="proj-card featured-proj reveal-up">
                     <div class="proj-num">01</div>
                     <div class="proj-content">
                         <h3 class="proj-title">Réorganisation arborescence Google Drive</h3>
-                        <p class="proj-desc">Audit et refonte complète du Drive de la Fédération (71 Go). Conception d'une arborescence accessible en 4–5 clics, archives annuelles, supports de communication Canva pour accompagner l'adoption par toute l'équipe.</p>
+                        <p class="proj-desc">Audit et refonte complète du Drive de la Fédération (71 Go). Conception d'une arborescence accessible en 4–5 clics, archives annuelles, supports de communication Canva pour accompagner l'adoption.</p>
                         <div class="proj-tags"><span>Google Drive</span><span>Conduite du changement</span><span>Canva</span></div>
                     </div>
                 </div>
-                <div class="proj-card">
+                <div class="proj-card reveal-up" style="transition-delay:0.05s">
                     <div class="proj-num">02</div>
                     <div class="proj-content">
                         <h3 class="proj-title">Migration Google Workspace</h3>
@@ -431,7 +452,7 @@
                         <div class="proj-tags"><span>Google Workspace</span><span>Cloud</span><span>IAM</span></div>
                     </div>
                 </div>
-                <div class="proj-card">
+                <div class="proj-card reveal-up" style="transition-delay:0.1s">
                     <div class="proj-num">03</div>
                     <div class="proj-content">
                         <h3 class="proj-title">Déploiement Bitwarden + MFA</h3>
@@ -439,7 +460,7 @@
                         <div class="proj-tags"><span>Bitwarden</span><span>Sécurité</span><span>MFA</span></div>
                     </div>
                 </div>
-                <div class="proj-card">
+                <div class="proj-card reveal-up" style="transition-delay:0.15s">
                     <div class="proj-num">04</div>
                     <div class="proj-content">
                         <h3 class="proj-title">Refonte baie de brassage</h3>
@@ -447,7 +468,7 @@
                         <div class="proj-tags"><span>Réseau</span><span>Infrastructure</span><span>Documentation</span></div>
                     </div>
                 </div>
-                <div class="proj-card has-link">
+                <div class="proj-card has-link reveal-up" style="transition-delay:0.2s">
                     <div class="proj-num">05</div>
                     <div class="proj-content">
                         <h3 class="proj-title">TP GLPI — Gestion de parc</h3>
@@ -456,7 +477,7 @@
                         <a href="tp-glpi.pdf" target="_blank" class="proj-link">Voir le TP ↗</a>
                     </div>
                 </div>
-                <div class="proj-card has-link">
+                <div class="proj-card has-link reveal-up" style="transition-delay:0.25s">
                     <div class="proj-num">06</div>
                     <div class="proj-content">
                         <h3 class="proj-title">TP Nagios — Supervision réseau</h3>
@@ -469,18 +490,18 @@
         </section>
 
         <!-- 06 VEILLE -->
-        <section id="veille" class="section reveal">
-            <div class="section-bg-num">06</div>
+        <section id="veille" class="section">
+            <div class="section-bg-num reveal-bg">06</div>
             <div class="section-header">
-                <div class="section-label">
+                <div class="section-label reveal-label">
                     <span class="label-num">06</span>
                     <span class="label-line"></span>
                     <span class="label-text">Veille technologique</span>
                 </div>
-                <h2 class="section-title">Ma veille<br><em>sur la MFA</em></h2>
+                <h2 class="section-title reveal-title">Ma veille<br><em>sur la MFA</em></h2>
             </div>
             <div class="veille-layout">
-                <div class="veille-main">
+                <div class="veille-main reveal-left">
                     <div class="veille-topic-header">
                         <div class="veille-icon-big">🔐</div>
                         <div>
@@ -489,12 +510,12 @@
                         </div>
                     </div>
                     <div class="veille-body">
-                        <p>Avec l'augmentation des cyberattaques — phishing, vols de mots de passe, piratages de comptes — les entreprises comme les particuliers doivent renforcer leur sécurité. La MFA est aujourd'hui l'une des solutions les plus simples et les plus efficaces pour protéger les accès : <strong>80 % des piratages de comptes sont liés à un mot de passe faible ou volé</strong>. Même un bon mot de passe peut être compromis par hameçonnage — la MFA réduit considérablement ce risque.</p>
-                        <p>J'ai identifié plusieurs méthodes utilisées aujourd'hui : le <strong>code SMS</strong> (le plus courant, mais vulnérable au SIM swapping), l'<strong>application d'authentification</strong> comme Google Authenticator ou Microsoft Authenticator (plus sécurisée, fonctionne sans connexion), la <strong>notification push</strong>, la <strong>clé physique FIDO2/U2F</strong> recommandée pour les administrateurs, et la <strong>biométrie</strong> (empreinte, reconnaissance faciale).</p>
-                        <p>En entreprise, la MFA protège les accès aux outils internes, comptes administrateurs, applications cloud (Microsoft 365, Google Workspace) et VPN. La tendance actuelle va vers le modèle <strong>Zero Trust</strong> et la <strong>passwordless authentication</strong>. Même si la MFA reste efficace, elle a des limites : certains utilisateurs la trouvent contraignante, le SMS n'est pas totalement sécurisé, et des attaques avancées comme le <strong>MFA fatigue</strong> peuvent la contourner.</p>
+                        <p>Avec l'augmentation des cyberattaques — phishing, vols de mots de passe, piratages de comptes — les entreprises comme les particuliers doivent renforcer leur sécurité. La MFA est aujourd'hui l'une des solutions les plus simples et les plus efficaces pour protéger les accès : <strong>80 % des piratages de comptes sont liés à un mot de passe faible ou volé</strong>.</p>
+                        <p>Méthodes identifiées : le <strong>code SMS</strong> (vulnérable au SIM swapping), l'<strong>application TOTP</strong> comme Google Authenticator (plus sécurisée, fonctionne sans connexion), la <strong>notification push</strong>, la <strong>clé physique FIDO2/U2F</strong> recommandée pour les administrateurs, et la <strong>biométrie</strong>.</p>
+                        <p>La tendance actuelle va vers le modèle <strong>Zero Trust</strong> et la <strong>passwordless authentication</strong>. Même si la MFA reste efficace, des attaques avancées comme le <strong>MFA fatigue</strong> peuvent la contourner.</p>
                     </div>
                     <div class="mfa-methods">
-                        <h4 class="methods-title">Les méthodes MFA comparées</h4>
+                        <h4 class="methods-title">Méthodes MFA comparées</h4>
                         <div class="methods-grid">
                             <div class="method-card"><span class="method-icon">💬</span><span class="method-name">Code SMS</span><span class="method-level low">Faible</span></div>
                             <div class="method-card"><span class="method-icon">📱</span><span class="method-name">Appli TOTP</span><span class="method-level mid">Moyen</span></div>
@@ -504,15 +525,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="veille-sidebar">
+                <div class="veille-sidebar reveal-right">
                     <div class="vs-block">
                         <h4 class="vs-title">Outils utilisés</h4>
                         <div class="vs-tools">
-                            <div class="vs-tool"><span class="vst-icon">📱</span><div><div class="vst-name">Google Authenticator</div><div class="vst-desc">Application TOTP (double authentification)</div></div></div>
-                            <div class="vs-tool"><span class="vst-icon">🔑</span><div><div class="vst-name">Bitwarden</div><div class="vst-desc">Gestionnaire de mots de passe open source</div></div></div>
-                            <div class="vs-tool"><span class="vst-icon">🔍</span><div><div class="vst-name">Have I Been Pwned</div><div class="vst-desc">Vérification des fuites de données</div></div></div>
-                            <div class="vs-tool"><span class="vst-icon">🛡️</span><div><div class="vst-name">YubiKey (FIDO2)</div><div class="vst-desc">Clé physique de sécurité U2F</div></div></div>
-                            <div class="vs-tool"><span class="vst-icon">📊</span><div><div class="vst-name">Google Workspace Admin</div><div class="vst-desc">Déploiement 2FA en entreprise</div></div></div>
+                            <div class="vs-tool"><span class="vst-icon">📱</span><div><div class="vst-name">Google Authenticator</div><div class="vst-desc">Application TOTP</div></div></div>
+                            <div class="vs-tool"><span class="vst-icon">🔑</span><div><div class="vst-name">Bitwarden</div><div class="vst-desc">Gestion mots de passe</div></div></div>
+                            <div class="vs-tool"><span class="vst-icon">🔍</span><div><div class="vst-name">Have I Been Pwned</div><div class="vst-desc">Fuites de données</div></div></div>
+                            <div class="vs-tool"><span class="vst-icon">🛡️</span><div><div class="vst-name">YubiKey (FIDO2)</div><div class="vst-desc">Clé physique U2F</div></div></div>
+                            <div class="vs-tool"><span class="vst-icon">📊</span><div><div class="vst-name">Google Workspace Admin</div><div class="vst-desc">Déploiement 2FA</div></div></div>
                         </div>
                     </div>
                     <div class="vs-block">
@@ -532,8 +553,8 @@
         </section>
 
         <!-- 07 CONTACT -->
-        <section id="contact" class="section reveal">
-            <div class="contact-wrap">
+        <section id="contact" class="section">
+            <div class="contact-wrap reveal-up">
                 <div class="contact-deco-line"></div>
                 <div class="section-label" style="justify-content:center;margin-bottom:24px;">
                     <span class="label-num">07</span>
@@ -545,8 +566,7 @@
                 <div class="contact-grid">
                     <a href="mailto:sarahnouvian@gmail.com" class="contact-card primary-card">
                         <span class="cc-icon">✉️</span>
-                        <span class="cc-label">Email</span>
-                        <span class="cc-value">sarahnouvian@gmail.com</span>
+                        <div class="cc-info"><span class="cc-label">Email</span><span class="cc-value">sarahnouvian@gmail.com</span></div>
                         <span class="cc-arrow">→</span>
                     </a>
                     <a href="https://github.com/soemyyy" target="_blank" class="contact-card">
@@ -583,7 +603,7 @@
 
     <div id="legalModal" class="modal">
         <div class="modal-content">
-            <button id="closeModal" class="modal-close" aria-label="Fermer">×</button>
+            <button id="closeModal" class="modal-close">×</button>
             <h2 class="modal-title">Mentions Légales</h2>
             <p class="modal-body">
                 Ce portfolio est réalisé à des fins pédagogiques dans le cadre du BTS SIO option SISR.<br><br>
