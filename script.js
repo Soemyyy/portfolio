@@ -110,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const animSelectors = [
         '.reveal-up', '.reveal-left', '.reveal-right',
         '.reveal-title', '.reveal-label', '.reveal-bg',
-        '.reveal-hero', '.reveal-hero-img', '.sc-anim'
+        '.reveal-hero', '.sc-anim'
     ];
     const allAnimEls = document.querySelectorAll(animSelectors.join(','));
 
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     /* ── HERO — déclenché immédiatement ───── */
     setTimeout(function () {
-        document.querySelectorAll('.reveal-hero, .reveal-hero-img').forEach(function (el) {
+        document.querySelectorAll('.reveal-hero').forEach(function (el) {
             el.classList.add('in');
         });
     }, 100);
